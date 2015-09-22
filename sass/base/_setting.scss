@@ -1,0 +1,34 @@
+*{
+	box-sizing:border-box;
+}
+body{
+	margin:0;
+}
+
+main{
+	padding-top:30px;
+}
+a{
+	text-decoration:none;
+}
+.container{
+	padding:0 percentage(10/320);
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	display:block;
+
+
+	@media (min-width:$tablet-width){
+		padding:0 percentage(10/640);
+	}
+	@media (min-width:$desk-width){
+		padding:0 percentage(10/940);
+	}
+	@media (min-width:$large-width){
+		max-width: 1280px;
+	}
+
+	background-color:$light-gray;
+	
+}

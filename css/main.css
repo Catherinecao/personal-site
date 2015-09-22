@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0; }
+
+main {
+  padding-top: 30px; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  padding: 0 3.125%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: block;
+  background-color: rgba(128, 128, 128, 0.1); }
+  @media (min-width: 640px) {
+    .container {
+      padding: 0 1.5625%; } }
+  @media (min-width: 960px) {
+    .container {
+      padding: 0 1.06383%; } }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1280px; } }
+
+.nav {
+  position: fixed;
+  background-color: yellow;
+  width: 100%; }
+  .nav .home {
+    font-size: 32px;
+    margin-top: 16px;
+    float: left; }
+  .nav .nav-item {
+    margin-top: 20px;
+    float: right; }
+    .nav .nav-item ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      .nav .nav-item ul li {
+        display: inline;
+        text-align: right; }
+        .nav .nav-item ul li a {
+          padding: 0 10px;
+          font-size: 20px;
+          color: black; }
+          @media (min-width: 640px) {
+            .nav .nav-item ul li a {
+              padding: 0 20px; } }
+
+/*# sourceMappingURL=main.css.map */
