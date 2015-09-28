@@ -1,73 +1,118 @@
+
 .about{
-	float: right;
-	margin-right:10px;
+	right:20px;
+	position:absolute;
+	margin-top:20px;
+
 	.rotate-right{
 		-ms-transform: rotate(-10deg); /* IE 9 */
     	-webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
     	transform: rotate(-10deg);
+    	cursor:pointer;
+
     	h2{
     		padding-left:8px;
     		margin:0;
+    		font-family: 'Architects Daughter', cursive;
     	}
     	.line{
 			width: 80px;
 			height: 5px;
-			background-color: black;
+			background-color: $black;
 			margin-top: -8px;
 			border-radius:5px;
+		}
+		.light{
+			transform: rotateY(180deg);
+			margin-top: -6px;
+			img{
+				width: 20px;
+			}
 		}
 	}
 	
 	.straight{
 		margin-left: 2px;
-		height: 350px;
+		height: 360px;
+		margin-top: -6px;
 	}
 }
 
 .project{
 	float: left;
 	padding-left:20px;
+	position:absolute;
 
 	.rotate-left{
-		margin-top: 80px;
+		margin-top: 100px;
 		-ms-transform: rotate(-15deg); /* IE 9 */
     	-webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
     	transform: rotate(-15deg);
+    	cursor:pointer;
     	h2{
-    		padding-right:8px;
+    		padding-right:5px;
     		margin:0;
+    		font-family: 'Architects Daughter', cursive;
     	}
     	.line{
-			width: 85px;
+			width: 125px;
 			height: 5px;
-			background-color: black;
+			background-color: $black;
 			margin-top: -8px;
 			border-radius:5px;
 		}
+		.light{
+			margin-top: -6px;
+			margin-left: -3px;
+			img{
+				width: 20px;
+			}
+		}
 	}
 	.straight{
-		margin-top: -15px;
+		margin-top: -30px;
 		float:right;
-		margin-left: 82px;
-		height:300px;
+		margin-left: 85px;
+		height:350px;
 	}
 }
 
 .straight{
 	
 	width:5px;
-	background-color: black;
+	background-color: $black;
 	border-radius:5px;
 	margin-top:5px;
 }
 
 .contact{
-	position:fixed;
-	bottom:0;
+	font-family: 'Architects Daughter', cursive;
+	position:absolute;
+	bottom:0px;
 	left:0;
 	display:inline-block;
 	width:100%;
-	background-color:black;
+	background-color:$black;
 	color:$white;
-	
+	cursor:pointer;
+	h2{
+		margin: 0;
+		margin-bottom: 10px;
+		display: inline-block;
+
+	}
+}
+.message-box{
+	display:none;
+}
+.lean{
+	position:absolute;
+	bottom:20px;
+	left:-40px;
+}
+.triangle{
+	border-left: 300px solid transparent;
+	border-bottom: 300px solid transparent; 	
+	border-right:300px solid $black;
+	transform:rotate(150deg);
 }

@@ -11,12 +11,15 @@ $large-width:1200px;
 $default-0:0 !default;
 
 $gray: gray;
-$white: white;
+$white:#FFFFFC;
+$black:#001011;
+$red:#E01A4F;
+$orange:#F15946;
 $light-gray:transparentize($gray,0.9);
 $transparent-gray:transparentize($gray,0.5);
 $dark-gray:darken($gray, 10%);
 $darker-gray:transparentize(black,0.3);
-$theme-color:#8B1D3F;
+$theme-color:#F5BB00;
 $darker-theme:#590C1D;
 $light-theme:#D72D62;
 $light-pink:transparentize($light-theme,0.7);
@@ -27,7 +30,7 @@ $light-fb-color:#dfe3ee;
 $blue:#16718A;
 $light-blue:#1693B7;
 
-$orange:#FF9800;
+// $orange:#FF9800;
 $light-orange:#FFE7C3;
 $light-orange-1:#E8A50C;
 $dark-orange:#F57C00;

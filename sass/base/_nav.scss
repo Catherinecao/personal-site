@@ -1,13 +1,16 @@
 .nav{
 	position:fixed;
-
+	z-index:101;
 	width:100%;
 
 
 	.home{
 		font-size: 32px;
-		margin-top: 16px;
+		padding-top:25px;
 		float: left;
+		font-family: 'Slackey', cursive;
+		margin: 0;
+		line-height: 0.8;
 	}
 
 	.nav-item{
@@ -22,10 +25,14 @@
 				// display: inline;
 				text-align: left;
 				padding:5px 0;
+				-ms-transform: rotate(-15deg); /* IE 9 */
+		    	-webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
+		    	transform: rotate(-15deg);
 				a{
 					padding:0 10px;
 					font-size:20px;
-					color:black;
+					color:$black;
+					font-family: 'Architects Daughter', cursive;
 					@media (min-width:$tablet-width){
 						padding:0 20px;
 					}

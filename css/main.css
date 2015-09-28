@@ -2,20 +2,38 @@
   box-sizing: border-box; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  background-color: #F5BB00; }
 
-main {
-  padding-top: 30px; }
+input {
+  border: 0;
+  background-color: #001011;
+  border-bottom: 2px solid #FFFFFC;
+  width: 100%; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  font-family: 'Comfortaa', cursive; }
+
+p {
+  font-family: 'Comfortaa', cursive; }
+
+button {
+  padding: 5px;
+  border-radius: 10px;
+  border: 0;
+  color: #FFFFFC;
+  background-color: #E01A4F;
+  font-family: 'Comfortaa', cursive;
+  font-size: 16px; }
 
 .container {
   padding: 0 3.125%;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  display: block; }
+  display: block;
+  position: relative; }
   @media (min-width: 640px) {
     .container {
       padding: 0 1.5625%; } }
@@ -28,11 +46,15 @@ a {
 
 .nav {
   position: fixed;
+  z-index: 101;
   width: 100%; }
   .nav .home {
     font-size: 32px;
-    margin-top: 16px;
-    float: left; }
+    padding-top: 25px;
+    float: left;
+    font-family: 'Slackey', cursive;
+    margin: 0;
+    line-height: 0.8; }
   .nav .nav-item {
     display: none;
     margin-top: 20px;
@@ -43,75 +65,131 @@ a {
       padding: 0; }
       .nav .nav-item ul li {
         text-align: left;
-        padding: 5px 0; }
+        padding: 5px 0;
+        -ms-transform: rotate(-15deg);
+        /* IE 9 */
+        -webkit-transform: rotate(-15deg);
+        /* Chrome, Safari, Opera */
+        transform: rotate(-15deg); }
         .nav .nav-item ul li a {
           padding: 0 10px;
           font-size: 20px;
-          color: black; }
+          color: #001011;
+          font-family: 'Architects Daughter', cursive; }
           @media (min-width: 640px) {
             .nav .nav-item ul li a {
               padding: 0 20px; } }
 
 .about {
-  float: right;
-  margin-right: 10px; }
+  right: 20px;
+  position: absolute;
+  margin-top: 20px; }
   .about .rotate-right {
     -ms-transform: rotate(-10deg);
     /* IE 9 */
     -webkit-transform: rotate(-10deg);
     /* Chrome, Safari, Opera */
-    transform: rotate(-10deg); }
+    transform: rotate(-10deg);
+    cursor: pointer; }
     .about .rotate-right h2 {
       padding-left: 8px;
-      margin: 0; }
+      margin: 0;
+      font-family: 'Architects Daughter', cursive; }
     .about .rotate-right .line {
       width: 80px;
       height: 5px;
-      background-color: black;
+      background-color: #001011;
       margin-top: -8px;
       border-radius: 5px; }
+    .about .rotate-right .light {
+      transform: rotateY(180deg);
+      margin-top: -6px; }
+      .about .rotate-right .light img {
+        width: 20px; }
   .about .straight {
     margin-left: 2px;
-    height: 350px; }
+    height: 360px;
+    margin-top: -6px; }
 
 .project {
   float: left;
-  padding-left: 20px; }
+  padding-left: 20px;
+  position: absolute; }
   .project .rotate-left {
-    margin-top: 80px;
+    margin-top: 100px;
     -ms-transform: rotate(-15deg);
     /* IE 9 */
     -webkit-transform: rotate(-15deg);
     /* Chrome, Safari, Opera */
-    transform: rotate(-15deg); }
+    transform: rotate(-15deg);
+    cursor: pointer; }
     .project .rotate-left h2 {
-      padding-right: 8px;
-      margin: 0; }
+      padding-right: 5px;
+      margin: 0;
+      font-family: 'Architects Daughter', cursive; }
     .project .rotate-left .line {
-      width: 85px;
+      width: 125px;
       height: 5px;
-      background-color: black;
+      background-color: #001011;
       margin-top: -8px;
       border-radius: 5px; }
+    .project .rotate-left .light {
+      margin-top: -6px;
+      margin-left: -3px; }
+      .project .rotate-left .light img {
+        width: 20px; }
   .project .straight {
-    margin-top: -15px;
+    margin-top: -30px;
     float: right;
-    margin-left: 82px;
-    height: 300px; }
+    margin-left: 85px;
+    height: 350px; }
 
 .straight {
   width: 5px;
-  background-color: black;
+  background-color: #001011;
   border-radius: 5px;
   margin-top: 5px; }
 
 .contact {
-  position: fixed;
-  bottom: 0;
+  font-family: 'Architects Daughter', cursive;
+  position: absolute;
+  bottom: 0px;
   left: 0;
   display: inline-block;
   width: 100%;
-  background-color: black;
-  color: white; }
+  background-color: #001011;
+  color: #FFFFFC;
+  cursor: pointer; }
+  .contact h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    display: inline-block; }
+
+.message-box {
+  display: none; }
+
+.lean {
+  position: absolute;
+  bottom: 20px;
+  left: -40px; }
+
+.triangle {
+  border-left: 300px solid transparent;
+  border-bottom: 300px solid transparent;
+  border-right: 300px solid #001011;
+  transform: rotate(150deg); }
+
+.about-content {
+  background-color: #FFFFFC;
+  top: 0;
+  position: absolute;
+  width: 70%; }
+
+.content {
+  text-align: left;
+  padding: 80px 0px 0px;
+  height: 100vh; }
+  .content .question {
+    color: #F15946; }
 
 /*# sourceMappingURL=main.css.map */
