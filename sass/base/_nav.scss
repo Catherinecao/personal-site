@@ -1,6 +1,6 @@
 .nav{
 	position:fixed;
-	background-color:yellow;
+
 	width:100%;
 
 
@@ -9,7 +9,9 @@
 		margin-top: 16px;
 		float: left;
 	}
+
 	.nav-item{
+		display: none;
 		margin-top: 20px;
 		float: right;
 		ul{
@@ -17,8 +19,9 @@
 			margin:0;
 			padding:0;
 			li{
-				display: inline;
-				text-align: right;
+				// display: inline;
+				text-align: left;
+				padding:5px 0;
 				a{
 					padding:0 10px;
 					font-size:20px;
