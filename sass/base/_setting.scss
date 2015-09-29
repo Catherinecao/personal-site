@@ -50,8 +50,10 @@ button{
 	}
 	@media (min-width:$desk-width){
 		padding:0 percentage(10/940);
+		max-width: 950px;
+		
 	}
 	@media (min-width:$large-width){
-		max-width: 1280px;
+		max-width: 950px;
 	}	
 }

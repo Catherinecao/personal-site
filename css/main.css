@@ -40,10 +40,11 @@ button {
       padding: 0 1.5625%; } }
   @media (min-width: 960px) {
     .container {
-      padding: 0 1.06383%; } }
+      padding: 0 1.06383%;
+      max-width: 950px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1280px; } }
+      max-width: 950px; } }
 
 .nav {
   position: fixed;
@@ -84,7 +85,6 @@ button {
 
 .main {
   position: fixed;
-  bottom: 500px;
   width: 100%; }
 
 .about {
@@ -103,7 +103,6 @@ button {
       margin-bottom: 0px;
       margin-top: 0;
       font-family: 'Architects Daughter', cursive;
-      text-shadow: 3px 2px 1px #ffe48f;
       color: #001011; }
     .about .rotate-right .line {
       width: 80px;
@@ -116,6 +115,16 @@ button {
       margin-top: -6px; }
       .about .rotate-right .light img {
         width: 20px; }
+    .about .rotate-right:hover {
+      -ms-transform: rotate(0deg);
+      /* IE 9 */
+      -webkit-transform: rotate(0deg);
+      /* Chrome, Safari, Opera */
+      transform: rotate(0deg); }
+      .about .rotate-right:hover h2 {
+        text-shadow: 3px 2px 1px #fffdf5; }
+      .about .rotate-right:hover .line {
+        margin-top: 0px; }
   .about .straight {
     margin-left: 2px;
     height: 400px;

@@ -1,7 +1,7 @@
 
 .main{
 	position: fixed;
-	bottom:500px;
+	// bottom:400px;
 	width:100%;
 }
 
@@ -21,7 +21,7 @@
     		margin-bottom: 0px;
     		margin-top: 0;
     		font-family: 'Architects Daughter', cursive;
-    		text-shadow: $dropshadow-text;
+    		
     		color:$black;
     	}
     	.line{
@@ -34,17 +34,26 @@
 		.light{
 			transform: rotateY(180deg);
 			margin-top: -6px;
+
 			img{
 				width: 20px;
 			}
 		}
 
 		&:hover{
+		-ms-transform: rotate(0deg); /* IE 9 */
+    	-webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+    	transform: rotate(0deg);
+
 			h2{
-				
+				text-shadow: $dropshadow-text;
+			}
+			.line{
+				margin-top: 0px;
 			}
 		}
 	}
+	
 	
 	.straight{
 		margin-left: 2px;
