@@ -1,4 +1,10 @@
 
+.main{
+	position: fixed;
+	bottom:500px;
+	width:100%;
+}
+
 .about{
 	right:20px;
 	position:absolute;
@@ -12,8 +18,11 @@
 
     	h2{
     		padding-left:8px;
-    		margin:0;
+    		margin-bottom: 0px;
+    		margin-top: 0;
     		font-family: 'Architects Daughter', cursive;
+    		text-shadow: $dropshadow-text;
+    		color:$black;
     	}
     	.line{
 			width: 80px;
@@ -29,11 +38,17 @@
 				width: 20px;
 			}
 		}
+
+		&:hover{
+			h2{
+				
+			}
+		}
 	}
 	
 	.straight{
 		margin-left: 2px;
-		height: 360px;
+		height: 400px;
 		margin-top: -6px;
 	}
 }

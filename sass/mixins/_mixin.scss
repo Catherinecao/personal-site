@@ -1,0 +1,24 @@
+@mixin half-circle ($width){
+	height:150px;
+     width:300px;
+     border-radius: 300px 300px 0 0;
+     -moz-border-radius: 300px 300px 0 0;
+     -webkit-border-radius: 300px 300px 0 0;
+}
+
+@mixin container{
+	@media (min-width:$tablet-min-width){
+		padding-left:percentage(9/750);
+		padding-right:percentage(9/750);
+	}
+	@media (min-width:$desk-min-width){
+		padding-left:percentage(11/970);
+		padding-right:percentage(11/970);
+	}
+	
+}
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}

@@ -10,7 +10,8 @@
 		float: left;
 		font-family: 'Slackey', cursive;
 		margin: 0;
-		line-height: 0.8;
+		line-height: 1;
+		text-shadow: $dropshadow-home;
 	}
 
 	.nav-item{
