@@ -92,6 +92,19 @@
 				width: 20px;
 			}
 		}
+
+		&:hover{
+		-ms-transform: rotate(0deg); /* IE 9 */
+    	-webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+    	transform: rotate(0deg);
+
+			h2{
+				text-shadow: $dropshadow-text;
+			}
+			.line{
+				margin-top: 0px;
+			}
+		}
 	}
 	.straight{
 		margin-top: -30px;
@@ -99,6 +112,7 @@
 		margin-left: 85px;
 		height:350px;
 	}
+
 }
 
 .straight{
@@ -111,32 +125,36 @@
 
 .contact{
 	font-family: 'Architects Daughter', cursive;
-	position:absolute;
-	bottom:0px;
+	position:relative;
+	bottom:0;
 	left:0;
 	display:inline-block;
 	width:100%;
 	background-color:$black;
 	color:$white;
-	cursor:pointer;
+
+	.contact-title{
+		cursor:pointer;
+	}
 	h2{
 		margin: 0;
 		margin-bottom: 10px;
 		display: inline-block;
-
+	}
+	.message-box{
+		height: 300px;
 	}
 }
-.message-box{
-	display:none;
-}
+
+
 .lean{
 	position:absolute;
-	bottom:20px;
-	left:-40px;
+	bottom:300px;
+	left:-30px;
 }
 .triangle{
-	border-left: 300px solid transparent;
-	border-bottom: 300px solid transparent; 	
-	border-right:300px solid $black;
+	border-left: 350px solid transparent;
+	border-bottom: 350px solid transparent; 	
+	border-right:370px solid $black;
 	transform:rotate(150deg);
 }

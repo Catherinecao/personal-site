@@ -33,7 +33,6 @@ button {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  display: block;
   position: relative; }
   @media (min-width: 640px) {
     .container {
@@ -157,6 +156,16 @@ button {
       margin-left: -3px; }
       .project .rotate-left .light img {
         width: 20px; }
+    .project .rotate-left:hover {
+      -ms-transform: rotate(0deg);
+      /* IE 9 */
+      -webkit-transform: rotate(0deg);
+      /* Chrome, Safari, Opera */
+      transform: rotate(0deg); }
+      .project .rotate-left:hover h2 {
+        text-shadow: 3px 2px 1px #fffdf5; }
+      .project .rotate-left:hover .line {
+        margin-top: 0px; }
   .project .straight {
     margin-top: -30px;
     float: right;
@@ -171,31 +180,31 @@ button {
 
 .contact {
   font-family: 'Architects Daughter', cursive;
-  position: absolute;
-  bottom: 0px;
+  position: relative;
+  bottom: 0;
   left: 0;
   display: inline-block;
   width: 100%;
   background-color: #001011;
-  color: #FFFFFC;
-  cursor: pointer; }
+  color: #FFFFFC; }
+  .contact .contact-title {
+    cursor: pointer; }
   .contact h2 {
     margin: 0;
     margin-bottom: 10px;
     display: inline-block; }
-
-.message-box {
-  display: none; }
+  .contact .message-box {
+    height: 300px; }
 
 .lean {
   position: absolute;
-  bottom: 20px;
-  left: -40px; }
+  bottom: 300px;
+  left: -30px; }
 
 .triangle {
-  border-left: 300px solid transparent;
-  border-bottom: 300px solid transparent;
-  border-right: 300px solid #001011;
+  border-left: 350px solid transparent;
+  border-bottom: 350px solid transparent;
+  border-right: 370px solid #001011;
   transform: rotate(150deg); }
 
 .about-content {
