@@ -125,13 +125,21 @@
 
 .contact{
 	font-family: 'Architects Daughter', cursive;
-	position:relative;
+	transform:translateY(300px);
+	transition: all ease .5s;
+	position:absolute;
 	bottom:0;
 	left:0;
 	display:inline-block;
 	width:100%;
 	background-color:$black;
 	color:$white;
+
+	&.slide{
+		transform:translateY(0px);
+		//bottom: 0;
+		transition: all ease .5s;
+	}
 
 	.contact-title{
 		cursor:pointer;
