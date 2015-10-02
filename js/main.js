@@ -4,31 +4,30 @@ $(document).ready(function(){
 		$lightBar = $('.straight'),
 		$contact = $('.contact'),
 		$contactTitle = $('.contact-title'),
-		$messageBox = $('.message-box'),
-		$triangle = $('.lean'),
-		$messageBoxHeight = $messageBox.height(),
-		$titleHeight = $('.contact-title').height(),
-		$screenHeight = window.innerHeight;
+		$aboutBtn = $('.about-btn'),
+		$aboutPage = $('.about-content'),
+		$screenHeight = window.innerHeight,
+		$screenWidth = window.innerWidth;
 
 
 	//initialize
 
 	$light.css({"bottom":$screenHeight-80});
 	$lightBar.css({"height":$screenHeight-80});
+	$aboutPage.css({"left":$screenWidth});
 	
 
 	//contact box
 	$contactTitle.click(function(e){
-		// e.preventDefault();
-		// var contactClick = true;
-		// if(contactClick === true){
-		// 	$contact.velocity({top:300});
-		// 	contactClick = false;
-		// }else{
-		// 	$contact.velocity({top:-300});
-		// 	contactClick = true;
-		// }
+		e.preventDefault();
+	
 		$contact.toggleClass('slide');
+	});
+
+	//about page
+	$aboutBtn.click(function(e){
+		e.preventDefault();
+		$aboutPage.css({"left":0});
 	});
 
 });
