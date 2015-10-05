@@ -134,6 +134,7 @@
 	width:100%;
 	background-color:$black;
 	color:$white;
+	z-index:300;
 
 	&.slide{
 		transform:translateY(0px);

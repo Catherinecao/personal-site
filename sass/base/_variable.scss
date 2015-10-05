@@ -50,7 +50,7 @@ $background-gray:transparentize($gray,0.95);
 
 $info-color:$gray;
 
-$dropshadow:1px 2px 5px transparentize(black,0.7);
+$dropshadow:4px 2px 5px transparentize(black,0.7);
 $dropshadow-nav:1px 8px 10px transparentize(black,0.8);
 $dropshadow-menu:1px -2px 5px transparentize(black,0.85);
 $dropshadow-text:3px 2px 1px lighten($theme-color,50%);

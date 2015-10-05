@@ -1,21 +1,27 @@
 .nav{
 	position:fixed;
-	z-index:101;
+	z-index:201;
 	width:100%;
+	padding-top:20px;
 
 
 	.home{
 		font-size: 32px;
 		padding-top:25px;
-		float: left;
+
 		font-family: 'Slackey', cursive;
 		margin: 0;
 		line-height: 1;
 		text-shadow: $dropshadow-home;
+		// @media (min-width:$desk-width){
+		// 	position:absolute;
+		// 	left:50%;
+		// }
 	}
 
 	.nav-item{
-		display: none;
+		// display: none;
+		
 		margin-top: 20px;
 		float: right;
 		ul{
@@ -23,17 +29,21 @@
 			margin:0;
 			padding:0;
 			li{
-				// display: inline;
+				position:absolute;
+				top:0;
+				right: 20px;
 				text-align: left;
 				padding:5px 0;
-				-ms-transform: rotate(-15deg); /* IE 9 */
-		    	-webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
-		    	transform: rotate(-15deg);
+				// -ms-transform: rotate(-15deg); /* IE 9 */
+		  //   	-webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
+		  //   	transform: rotate(-15deg);
 				a{
 					padding:0 10px;
 					font-size:20px;
 					color:$black;
 					font-family: 'Architects Daughter', cursive;
+					border-bottom: 3px solid $white;
+
 					@media (min-width:$tablet-width){
 						padding:0 20px;
 					}

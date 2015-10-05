@@ -1,14 +1,24 @@
 .about-content{
 	background-color:$white;
 	top:0;
+	transform:translateX(-100%);
 	position:absolute;
 	width:70%;
+	box-shadow:$dropshadow;
+	z-index:200;
 }
 
 .content{
+
 	text-align: left;
-	padding:80px 0px 0px;
+	padding-top:100px;
 	height:100vh;
+	padding-left:percentage(15/320);
+	padding-right:percentage(15/320);
+	@media (min-width:$tablet-width){
+		padding-left:percentage(2/3);
+	}
+
 	.question{
 		color:$orange;
 	}

@@ -39,7 +39,7 @@ button {
       padding: 0 1.5625%; } }
   @media (min-width: 960px) {
     .container {
-      padding: 0 1.06383%;
+      padding: 0 2.12766%;
       max-width: 950px; } }
   @media (min-width: 1200px) {
     .container {
@@ -47,18 +47,17 @@ button {
 
 .nav {
   position: fixed;
-  z-index: 101;
-  width: 100%; }
+  z-index: 201;
+  width: 100%;
+  padding-top: 20px; }
   .nav .home {
     font-size: 32px;
     padding-top: 25px;
-    float: left;
     font-family: 'Slackey', cursive;
     margin: 0;
     line-height: 1;
     text-shadow: 4px 2px 1px #8f6d00; }
   .nav .nav-item {
-    display: none;
     margin-top: 20px;
     float: right; }
     .nav .nav-item ul {
@@ -66,18 +65,17 @@ button {
       margin: 0;
       padding: 0; }
       .nav .nav-item ul li {
+        position: absolute;
+        top: 0;
+        right: 20px;
         text-align: left;
-        padding: 5px 0;
-        -ms-transform: rotate(-15deg);
-        /* IE 9 */
-        -webkit-transform: rotate(-15deg);
-        /* Chrome, Safari, Opera */
-        transform: rotate(-15deg); }
+        padding: 5px 0; }
         .nav .nav-item ul li a {
           padding: 0 10px;
           font-size: 20px;
           color: #001011;
-          font-family: 'Architects Daughter', cursive; }
+          font-family: 'Architects Daughter', cursive;
+          border-bottom: 3px solid #FFFFFC; }
           @media (min-width: 640px) {
             .nav .nav-item ul li a {
               padding: 0 20px; } }
@@ -188,7 +186,8 @@ button {
   display: inline-block;
   width: 100%;
   background-color: #001011;
-  color: #FFFFFC; }
+  color: #FFFFFC;
+  z-index: 300; }
   .contact.slide {
     transform: translateY(0px);
     transition: all ease .5s; }
@@ -215,13 +214,21 @@ button {
 .about-content {
   background-color: #FFFFFC;
   top: 0;
+  transform: translateX(-100%);
   position: absolute;
-  width: 70%; }
+  width: 70%;
+  box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 200; }
 
 .content {
   text-align: left;
-  padding: 80px 0px 0px;
-  height: 100vh; }
+  padding-top: 100px;
+  height: 100vh;
+  padding-left: 4.6875%;
+  padding-right: 4.6875%; }
+  @media (min-width: 640px) {
+    .content {
+      padding-left: 66.66667%; } }
   .content .question {
     color: #F15946; }
 
