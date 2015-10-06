@@ -58,6 +58,7 @@ button {
     line-height: 1;
     text-shadow: 4px 2px 1px #8f6d00; }
   .nav .nav-item {
+    transform: translateY(-50%);
     margin-top: 20px;
     float: right; }
     .nav .nav-item ul {
@@ -67,11 +68,18 @@ button {
       .nav .nav-item ul li {
         position: absolute;
         top: 0;
-        right: 20px;
+        right: 10px;
         text-align: left;
-        padding: 5px 0; }
+        padding: 5px 0;
+        transform: translateY(-500%);
+        opacity: 0; }
+        .nav .nav-item ul li.move-in {
+          transform: translateY(0); }
+        @media (min-width: 640px) {
+          .nav .nav-item ul li {
+            right: 20px; } }
         .nav .nav-item ul li a {
-          padding: 0 10px;
+          padding: 0 5px;
           font-size: 20px;
           color: #001011;
           font-family: 'Architects Daughter', cursive;
@@ -231,5 +239,40 @@ button {
       padding-left: 66.66667%; } }
   .content .question {
     color: #F15946; }
+
+.project-content {
+  background-color: #FFFFFC;
+  top: 0;
+  position: absolute;
+  width: 70%;
+  box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 200;
+  height: 100vh;
+  overflow: scroll; }
+  .project-content .period {
+    padding: 10px;
+    float: right; }
+    @media (min-width: 960px) {
+      .project-content .period {
+        width: 650px; } }
+  .project-content .img {
+    float: right;
+    width: 200px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: gray;
+    margin-right: 10px;
+    margin-bottom: 10px; }
+    @media (min-width: 640px) {
+      .project-content .img {
+        display: inline-block; } }
+  .project-content .circle {
+    position: absolute;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #001011; }
 
 /*# sourceMappingURL=main.css.map */

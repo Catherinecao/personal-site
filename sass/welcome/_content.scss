@@ -23,3 +23,45 @@
 		color:$orange;
 	}
 }
+
+.project-content{
+	background-color:$white;
+	top:0;
+	//transform:translateX(-100%);
+	position:absolute;
+	width:70%;
+	box-shadow:$dropshadow;
+	z-index:200;
+	height:100vh;
+	overflow:scroll;
+
+	.period{
+		padding:10px;
+		float: right;
+		@media (min-width:$desk-width){
+			width: 650px;
+		}
+		
+	}
+	.img{
+		float: right;
+		width: 200px;
+		height: 150px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color:$gray;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		@media (min-width:$tablet-width){
+			display: inline-block;
+		}
+	}
+	.circle{
+		position:absolute;
+		right: 0;
+		width: 10px;
+		height: 10px;
+		border-radius: 10px;
+		background-color:$black;
+	}
+}

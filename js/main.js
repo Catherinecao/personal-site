@@ -20,9 +20,9 @@ $(document).ready(function(){
 
 	$light.css({"bottom":$screenHeight-80});
 	$lightBar.css({"height":$screenHeight-80});
-	$navItemBack.css({"opacity":0});
-	$navItemAbout.css({"opacity":0});
-	$navItemProject.css({"opacity":0});
+	// $navItemBack.css({"opacity":0});
+	// $navItemAbout.css({"opacity":0});
+	// $navItemProject.css({"opacity":0});
 	
 	
 
@@ -41,13 +41,14 @@ $(document).ready(function(){
 
 		aboutLightHide();
 
-		ProjectShow();		
+		projectShow();		
 	});
 
 	//back
 	$navItemBack.click(function(e){
 		e.preventDefault();
-		$navItems.animate({opacity:0},200,'easeOutExpo');
+		
+		projectHide();
 		aboutHide();
 		aboutLightShow();
 
@@ -69,19 +70,30 @@ $(document).ready(function(){
 		$aboutLight.animate({top:0},{duration:300},"easeInBack");
 	}
 
-	function ProjectShow (){
-		$navItemBack.delay(1000).animate(
+	function projectShow (){
+		$navItemBack.addClass('move-in').delay(1000).animate(
 			{opacity:1,top:20},
 			{duration:{opacity:200,top:300},
 			specialEasing:{opacity:'easeOutExpo',top:'easeOutBounce'}
 			}
 		);
-		$navItemProject.delay(1500).animate(
+		$navItemProject.addClass('move-in').delay(1500).animate(
 			{opacity:1,top:60},
 			{duration:{opacity:200,top:300},
 			specialEasing:{opacity:'easeOutExpo',top:'easeOutBounce'}
 			}
 		);
+	}
+
+	function projectHide (){
+		$navItemProject.animate(
+			{opacity:0,top:0},
+			{duration:{opacity:100,top:200},
+			specialEasing:{opacity:'easeOutExpo',top:'easeOutBounce'}}).removeClass('move-in');
+		$navItemBack.animate(
+			{opacity:0,top:0},
+			{duration:{opacity:100,top:200},
+			specialEasing:{opacity:'easeOutExpo',top:'easeOutBounce'}}).removeClass('move-in');
 	}
 
 });
