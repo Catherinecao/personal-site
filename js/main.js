@@ -11,6 +11,8 @@ $(document).ready(function(){
 		$navItemAbout = $('.1'),
 		$navItemProject = $('.2'),
 		$navItemBack = $('.3'),
+		$pBtn = $('.p-btn'),
+		$nBtn = $('.n-btn'),
 		$screenHeight = window.innerHeight,
 		$screenWidth = window.innerWidth,
 		movingTime = 600;
@@ -20,12 +22,7 @@ $(document).ready(function(){
 
 	$light.css({"bottom":$screenHeight-80});
 	$lightBar.css({"height":$screenHeight-80});
-	// $navItemBack.css({"opacity":0});
-	// $navItemAbout.css({"opacity":0});
-	// $navItemProject.css({"opacity":0});
 	
-	
-
 	//contact box
 	$contactTitle.click(function(e){
 		e.preventDefault();

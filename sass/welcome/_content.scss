@@ -33,16 +33,17 @@
 	box-shadow:$dropshadow;
 	z-index:200;
 	height:100vh;
-	overflow:scroll;
+	
 
 	.period{
 		padding:10px;
 		float: right;
+		margin-top: 100px;
 		@media (min-width:$desk-width){
 			width: 650px;
-		}
-		
+		}	
 	}
+
 	.img{
 		float: right;
 		width: 200px;
@@ -55,13 +56,5 @@
 		@media (min-width:$tablet-width){
 			display: inline-block;
 		}
-	}
-	.circle{
-		position:absolute;
-		right: 0;
-		width: 10px;
-		height: 10px;
-		border-radius: 10px;
-		background-color:$black;
-	}
+	}	
 }

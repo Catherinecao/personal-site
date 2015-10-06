@@ -49,14 +49,18 @@ button {
   position: fixed;
   z-index: 201;
   width: 100%;
-  padding-top: 20px; }
+  display: inline-block; }
+  @media (min-width: 640px) {
+    .nav {
+      padding-top: 20px; } }
   .nav .home {
     font-size: 32px;
     padding-top: 25px;
     font-family: 'Slackey', cursive;
     margin: 0;
     line-height: 1;
-    text-shadow: 4px 2px 1px #8f6d00; }
+    text-shadow: 4px 2px 1px #8f6d00;
+    display: inline-block; }
   .nav .nav-item {
     transform: translateY(-50%);
     margin-top: 20px;
@@ -87,6 +91,25 @@ button {
           @media (min-width: 640px) {
             .nav .nav-item ul li a {
               padding: 0 20px; } }
+  .nav .lights {
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    transform: translateY(-200%); }
+    @media (min-width: 960px) {
+      .nav .lights {
+        width: 650px; } }
+    .nav .lights .light {
+      padding: 0 10px;
+      float: right;
+      cursor: pointer;
+      display: inline-block; }
+      .nav .lights .light p {
+        margin: 0; }
+    .nav .lights img {
+      width: 50px; }
+    .nav .lights.active {
+      transform: translateY(0%); }
 
 .main {
   position: fixed;
@@ -247,11 +270,11 @@ button {
   width: 70%;
   box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.3);
   z-index: 200;
-  height: 100vh;
-  overflow: scroll; }
+  height: 100vh; }
   .project-content .period {
     padding: 10px;
-    float: right; }
+    float: right;
+    margin-top: 100px; }
     @media (min-width: 960px) {
       .project-content .period {
         width: 650px; } }
@@ -267,12 +290,5 @@ button {
     @media (min-width: 640px) {
       .project-content .img {
         display: inline-block; } }
-  .project-content .circle {
-    position: absolute;
-    right: 0;
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
-    background-color: #001011; }
 
 /*# sourceMappingURL=main.css.map */
