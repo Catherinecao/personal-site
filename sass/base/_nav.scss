@@ -2,10 +2,10 @@
 	position:fixed;
 	z-index:201;
 	width:100%;
-	
+	margin-top: -50px;
 	display:inline-block;
 	@media (min-width:$tablet-width){
-		padding-top:20px;
+		margin-top: -40px;
 	}
 
 	.home{
@@ -16,14 +16,9 @@
 		line-height: 1;
 		text-shadow: $dropshadow-home;
 		display: inline-block;
-		// @media (min-width:$desk-width){
-		// 	position:absolute;
-		// 	left:50%;
-		// }
 	}
 
 	.nav-item{
-		// display: none;
 		transform:translateY(-50%);
 		margin-top: 20px;
 		float: right;
@@ -45,9 +40,6 @@
 				@media (min-width:$tablet-width){
 						right:20px;
 					}
-				// -ms-transform: rotate(-15deg); /* IE 9 */
-		  //   	-webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
-		  //   	transform: rotate(-15deg);
 				a{
 					padding:0 5px;
 					font-size:20px;
@@ -67,9 +59,9 @@
 		padding:10px;
 		text-align: center;
 		display: inline-block;
-		transform: translateY(-200%);
-		@media (min-width:$desk-width){
-			width: 650px;
+		
+		@media (min-width:$tablet-width){
+			margin-left: 50px;
 		}
 
 		.light{
@@ -77,17 +69,27 @@
 			float: right;
 			cursor: pointer;
 			display: inline-block;
+			transform: translateY(-200%);
+			opacity: 0;
+			transition: all ease .3s;
+			@media (min-width:$tablet-width){
+				margin-left: 50px;
+			}
+
+			
 			p{
 				margin: 0;
 			}
-		}
-		img{
-			width: 50px;
+			&.active{
+				transform: translateY(0%);
+				opacity: 1;
+				transition: all ease .3s;
+			}	
 		}
 
-		&.active{
-			transform: translateY(0%);
-		}
+		img{
+			width: 50px;
+		}		
 	}
 }
 

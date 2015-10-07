@@ -1,15 +1,15 @@
 .about-content{
 	background-color:$white;
 	top:0;
-	transform:translateX(-100%);
+	transform:translateX(-110%);
 	position:absolute;
-	width:70%;
+	width:75%;
 	box-shadow:$dropshadow;
 	z-index:200;
 }
 
 .content{
-
+	float: right;
 	text-align: left;
 	padding-top:100px;
 	height:100vh;
@@ -27,9 +27,9 @@
 .project-content{
 	background-color:$white;
 	top:0;
-	//transform:translateX(-100%);
+	transform:translateX(-110%);
 	position:absolute;
-	width:70%;
+	width:75%;
 	box-shadow:$dropshadow;
 	z-index:200;
 	height:100vh;
