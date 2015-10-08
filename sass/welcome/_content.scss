@@ -18,6 +18,12 @@
 	@media (min-width:$tablet-width){
 		padding-left:percentage(2/3);
 	}
+	h2{
+		color:$black;
+		font-family: 'Architects Daughter', cursive;
+		text-shadow: $dropshadow-title;
+		margin-bottom: 20px;
+	}
 
 	.question{
 		color:$orange;
@@ -33,12 +39,20 @@
 	box-shadow:$dropshadow;
 	z-index:200;
 	height:100vh;
-	
+	overflow: auto;
+
+	h2{
+		color:$black;
+		font-family: 'Architects Daughter', cursive;
+		text-shadow: $dropshadow-title;
+		margin-bottom: 20px;
+	}
 
 	.period{
 		padding:10px;
 		float: right;
 		margin-top: 100px;
+		//overflow-x: scroll;
 		@media (min-width:$desk-width){
 			width: 650px;
 		}	
@@ -50,9 +64,11 @@
 		height: 150px;
 		margin-left: auto;
 		margin-right: auto;
-		background-color:$gray;
+		background-color:$black;
 		margin-right: 10px;
 		margin-bottom: 10px;
+
+
 		@media (min-width:$tablet-width){
 			display: inline-block;
 		}

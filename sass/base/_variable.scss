@@ -36,14 +36,6 @@ $light-orange-1:#E8A50C;
 $dark-orange:#F57C00;
 $darker-orange:#724400;
 
-$color-salsa:$theme-color;
-$color-bachata:$orange;
-$color-cha-cha:$lighten-theme;
-$color-zouk:$blue;
-//#254E70;
-$color-kizomba:$darker-orange;
-
-
 
 $background-color-start:$orange;
 $background-gray:transparentize($gray,0.95);
@@ -54,6 +46,8 @@ $dropshadow:4px 2px 5px transparentize(black,0.7);
 $dropshadow-nav:1px 8px 10px transparentize(black,0.8);
 $dropshadow-menu:1px -2px 5px transparentize(black,0.85);
 $dropshadow-text:3px 2px 1px lighten($theme-color,50%);
+$dropshadow-text-active:1px 1px 1px darken($gray,80%);
+$dropshadow-title:1px 1px 1px $gray;
 $dropshadow-home:4px 2px 1px darken($theme-color,20%);
 $dropshadow-point:1px 1px 2px transparentize(black,0.75);
 $dropshadow-card:1px 2px 5px transparentize(black,0.9);
