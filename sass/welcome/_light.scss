@@ -148,7 +148,9 @@
 	h2{
 		margin: 0;
 		margin-bottom: 10px;
+		margin-top: 10px;
 		display: inline-block;
+		font-family: 'Slackey', cursive;
 	}
 	.message-box{
 		height: 300px;
@@ -166,4 +168,54 @@
 	border-bottom: 350px solid transparent; 	
 	border-right:370px solid $black;
 	transform:rotate(150deg);
+}
+
+.bg-lights{
+	display:none;
+	@media (min-width:$tablet-width){
+		display: block;
+		position: absolute;
+		top:0;
+		width:100%;
+	}
+	// margin-top:400px;
+
+	.right-lights{
+		@media (min-width:$tablet-width){
+			top:0;
+			right: 0;
+			position: absolute;
+			margin-right: -100px;
+			margin-top: -10px;
+			width: 300px;
+		}
+
+		@media (min-width:$desk-width){
+			top:0;
+			right: 0;
+			position: absolute;
+			margin-right: 180px;
+			margin-top: 22px;
+			width: 350px;
+		}
+	}
+
+	.left-lights{
+		@media (min-width:$tablet-width){
+			margin-top: 25px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin-left:250px;
+			width: 300px; 
+		}
+		@media (min-width:$desk-width){
+			margin-top: 25px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin-left: 300px;
+			width: 350px; 
+		}
+	}	
 }

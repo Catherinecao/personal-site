@@ -16,6 +16,7 @@ $(document).ready(function(){
 		$projectContral = $('.light'),
 		$pBtn = $('#p-btn'),
 		$nBtn = $('#n-btn'),
+		$bgImg = $('.bg-lights'),
 		$screenHeight = window.innerHeight,
 		$screenWidth = window.innerWidth,
 		movingTime = 600;
@@ -25,6 +26,7 @@ $(document).ready(function(){
 
 	$light.css({"bottom":$screenHeight-80});
 	$lightBar.css({"height":$screenHeight-80});
+	$bgImg.css({"margin-top":$screenHeight*0.3});
 	
 	//contact box
 	$contactTitle.click(function(e){
@@ -85,7 +87,12 @@ $(document).ready(function(){
 
 	//project scrolling
 	$pBtn.click(function(){
-		$(this).toggleClass('hover');
+		$(this).addClass('hover');
+		$nBtn.removeClass('hover');
+	});
+	$nBtn.click(function(){
+		$(this).addClass('hover');
+		$pBtn.removeClass('hover');
 	});
 
 	function aboutShow (){

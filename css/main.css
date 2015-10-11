@@ -249,7 +249,9 @@ button {
   .contact h2 {
     margin: 0;
     margin-bottom: 10px;
-    display: inline-block; }
+    margin-top: 10px;
+    display: inline-block;
+    font-family: 'Slackey', cursive; }
   .contact .message-box {
     height: 300px; }
 
@@ -263,6 +265,47 @@ button {
   border-bottom: 350px solid transparent;
   border-right: 370px solid #001011;
   transform: rotate(150deg); }
+
+.bg-lights {
+  display: none; }
+  @media (min-width: 640px) {
+    .bg-lights {
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100%; } }
+  @media (min-width: 640px) {
+    .bg-lights .right-lights {
+      top: 0;
+      right: 0;
+      position: absolute;
+      margin-right: -100px;
+      margin-top: -10px;
+      width: 300px; } }
+  @media (min-width: 960px) {
+    .bg-lights .right-lights {
+      top: 0;
+      right: 0;
+      position: absolute;
+      margin-right: 180px;
+      margin-top: 22px;
+      width: 350px; } }
+  @media (min-width: 640px) {
+    .bg-lights .left-lights {
+      margin-top: 25px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: 250px;
+      width: 300px; } }
+  @media (min-width: 960px) {
+    .bg-lights .left-lights {
+      margin-top: 25px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: 300px;
+      width: 350px; } }
 
 .about-content {
   background-color: #FFFFFC;
