@@ -53,8 +53,6 @@
 			}
 		}
 	}
-	
-	
 	.straight{
 		margin-left: 2px;
 		height: 400px;
@@ -160,7 +158,7 @@
 
 .lean{
 	position:absolute;
-	bottom:300px;
+	bottom:320px;
 	left:-30px;
 }
 .triangle{
@@ -198,6 +196,9 @@
 			margin-top: 22px;
 			width: 350px;
 		}
+		@media (min-width:$large-width){
+			margin-right: 140px;
+		}
 	}
 
 	.left-lights{
@@ -216,6 +217,9 @@
 			left: 0;
 			margin-left: 300px;
 			width: 350px; 
+		}
+		@media (min-width:$large-width){
+			margin-left: 200px;
 		}
 	}	
 }

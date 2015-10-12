@@ -95,24 +95,27 @@ button {
             .nav .nav-item ul li a {
               padding: 0 20px; } }
   .nav .lights {
-    padding: 10px;
-    text-align: center;
-    display: inline-block; }
+    display: none; }
     @media (min-width: 640px) {
       .nav .lights {
-        margin-left: 150px; } }
+        margin-left: 150px;
+        padding: 10px;
+        text-align: center;
+        display: inline-block; } }
     .nav .lights .light {
-      padding: 0 10px;
+      padding: 0 5px;
       float: right;
       cursor: pointer;
       display: inline-block;
       transform: translateY(-200%);
       opacity: 0;
       transition: all ease .3s;
-      padding-bottom: 5px; }
+      padding-bottom: 5px;
+      width: 67px; }
       @media (min-width: 640px) {
         .nav .lights .light {
-          margin-left: 50px; } }
+          margin-left: 50px;
+          padding: 0 10px; } }
       .nav .lights .light p {
         margin: 0; }
       .nav .lights .light.active {
@@ -132,6 +135,35 @@ button {
           filter: invert(50%) drop-shadow(1px 1px 1px black); }
     .nav .lights img {
       width: 50px; }
+  .nav .mobile-lights {
+    display: inline-block;
+    margin-left: 120px; }
+    .nav .mobile-lights .m-light {
+      position: absolute;
+      top: 0;
+      padding: 0 5px;
+      float: right;
+      cursor: pointer;
+      text-align: center;
+      display: block;
+      width: 67px;
+      transform: translateY(-200%);
+      opacity: 0;
+      transition: all ease .3s; }
+      .nav .mobile-lights .m-light.choose {
+        transform: translateY(10%);
+        opacity: 1;
+        transition: all ease .3s; }
+      .nav .mobile-lights .m-light.switch {
+        transform: translateY(-200%);
+        transition: all ease .3s; }
+      .nav .mobile-lights .m-light.move-in {
+        transform: translateY(0%);
+        transition: all ease .1s; }
+    .nav .mobile-lights img {
+      width: 50px; }
+    .nav .mobile-lights p {
+      margin: 0; }
 
 .main {
   position: fixed;
@@ -257,7 +289,7 @@ button {
 
 .lean {
   position: absolute;
-  bottom: 300px;
+  bottom: 320px;
   left: -30px; }
 
 .triangle {
@@ -290,6 +322,9 @@ button {
       margin-right: 180px;
       margin-top: 22px;
       width: 350px; } }
+  @media (min-width: 1200px) {
+    .bg-lights .right-lights {
+      margin-right: 140px; } }
   @media (min-width: 640px) {
     .bg-lights .left-lights {
       margin-top: 25px;
@@ -306,6 +341,9 @@ button {
       left: 0;
       margin-left: 300px;
       width: 350px; } }
+  @media (min-width: 1200px) {
+    .bg-lights .left-lights {
+      margin-left: 200px; } }
 
 .about-content {
   background-color: #FFFFFC;
@@ -315,24 +353,23 @@ button {
   width: 75%;
   box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.3);
   z-index: 200; }
-
-.content {
-  float: right;
-  text-align: left;
-  padding-top: 100px;
-  height: 100vh;
-  padding-left: 4.6875%;
-  padding-right: 4.6875%; }
-  @media (min-width: 640px) {
-    .content {
-      padding-left: 66.66667%; } }
-  .content h2 {
-    color: #001011;
-    font-family: 'Architects Daughter', cursive;
-    text-shadow: 1px 1px 1px gray;
-    margin-bottom: 20px; }
-  .content .question {
-    color: #F15946; }
+  .about-content .content {
+    float: right;
+    text-align: left;
+    padding-top: 100px;
+    height: 100vh;
+    padding-left: 15.625%;
+    padding-right: 4.6875%; }
+    @media (min-width: 640px) {
+      .about-content .content {
+        padding-left: 66.66667%; } }
+    .about-content .content h2 {
+      color: #001011;
+      font-family: 'Architects Daughter', cursive;
+      text-shadow: 1px 1px 1px gray;
+      margin-bottom: 20px; }
+    .about-content .content .question {
+      color: #F15946; }
 
 .project-content {
   background-color: #FFFFFC;
@@ -350,10 +387,11 @@ button {
     text-shadow: 1px 1px 1px gray;
     margin-bottom: 20px; }
   .project-content .projects {
-    padding: 10px;
+    overflow-x: scroll;
     float: right; }
     @media (min-width: 960px) {
       .project-content .projects {
+        padding: 10px;
         width: 650px; } }
   .project-content .period {
     padding: 10px;
@@ -362,6 +400,16 @@ button {
     @media (min-width: 960px) {
       .project-content .period {
         width: 650px; } }
+    .project-content .period .title {
+      width: 100%;
+      display: inline-block;
+      float: right; }
+    .project-content .period h2 {
+      display: inline-block;
+      margin-left: 40px; }
+    .project-content .period .imgs {
+      display: inline-block;
+      width: 100%; }
   .project-content .img {
     float: right;
     width: 200px;

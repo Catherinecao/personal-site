@@ -14,7 +14,10 @@ $(document).ready(function(){
 		$projectBtn = $('.project-btn'),
 		$projectPage = $('.project-content'),
 		$projectContral = $('.light'),
+		$mProjectContral = $('.m-light'),
 		$pBtn = $('#p-btn'),
+		$mPBtn = $('#p-btn-m'),
+		$mNBtn = $('#n-btn-m'),
 		$nBtn = $('#n-btn'),
 		$bgImg = $('.bg-lights'),
 		$screenHeight = window.innerHeight,
@@ -27,6 +30,8 @@ $(document).ready(function(){
 	$light.css({"bottom":$screenHeight-80});
 	$lightBar.css({"height":$screenHeight-80});
 	$bgImg.css({"margin-top":$screenHeight*0.3});
+
+
 	
 	//contact box
 	$contactTitle.click(function(e){
@@ -65,6 +70,11 @@ $(document).ready(function(){
 		aboutHide();
 		projectShow();
 		aboutBtnShow();
+
+		$mProjectContral.removeClass('move-in');
+		$mPBtn.addClass('choose');
+
+
 	});
 
 	//about
@@ -73,6 +83,10 @@ $(document).ready(function(){
 		projectBtnShow();
 		projectHide();
 		aboutShow();
+
+		$mProjectContral.removeClass('move-in');
+		$mPBtn.removeClass('choose');
+		$mNBtn.removeClass('choose');
 	});
 
 	//project click
@@ -80,14 +94,26 @@ $(document).ready(function(){
 		e.preventDefault();
 
 		projectShow();
+		
 
 		aboutLightHide();
 
-		btnPShow();		
+		btnPShow();	
+		$mPBtn.addClass('choose');	
 	});
 
 	//project scrolling
-	$pBtn.click(function(){
+	$mPBtn.click(function(){
+		$(this).removeClass('choose');
+		$mNBtn.addClass('choose');
+	});
+
+	$mNBtn.click(function(){
+		$(this).removeClass('choose');
+		$mPBtn.addClass('choose');
+	});
+
+	$pBtn.click(function(){	
 		$(this).addClass('hover');
 		$nBtn.removeClass('hover');
 	});
@@ -154,11 +180,16 @@ $(document).ready(function(){
 			{opacity:0,top:0},
 			{duration:{opacity:100,top:200},
 			specialEasing:{opacity:'easeOutExpo',top:'easeOutBounce'}}).removeClass('move-in');
+
+		$mProjectContral.addClass('move-in');
+		$mPBtn.removeClass('choose');
+		$mNBtn.removeClass('choose');
 	}
 
 	function projectShow (){
 		$projectPage.animate({left:$screenWidth*0.7+20},{duration:movingTime},"easeOutBounce");
 		projectContralShow();
+
 
 	}
 	function projectHide (){
@@ -166,10 +197,11 @@ $(document).ready(function(){
 
 		$projectContral.removeClass('active');
 
+
 	}
 	function projectContralShow (){
 		$projectContral.addClass('active');
-		
+
 	}
 
 	function aboutBtnShow (){

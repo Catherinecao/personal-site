@@ -6,29 +6,31 @@
 	width:75%;
 	box-shadow:$dropshadow;
 	z-index:200;
+
+	.content{
+		float: right;
+		text-align: left;
+		padding-top:100px;
+		height:100vh;
+		padding-left:percentage(50/320);
+		padding-right:percentage(15/320);
+		@media (min-width:$tablet-width){
+			padding-left:percentage(2/3);
+		}
+		h2{
+			color:$black;
+			font-family: 'Architects Daughter', cursive;
+			text-shadow: $dropshadow-title;
+			margin-bottom: 20px;
+		}
+
+		.question{
+			color:$orange;
+		}
+	}
 }
 
-.content{
-	float: right;
-	text-align: left;
-	padding-top:100px;
-	height:100vh;
-	padding-left:percentage(15/320);
-	padding-right:percentage(15/320);
-	@media (min-width:$tablet-width){
-		padding-left:percentage(2/3);
-	}
-	h2{
-		color:$black;
-		font-family: 'Architects Daughter', cursive;
-		text-shadow: $dropshadow-title;
-		margin-bottom: 20px;
-	}
 
-	.question{
-		color:$orange;
-	}
-}
 
 .project-content{
 	background-color:$white;
@@ -48,21 +50,37 @@
 		margin-bottom: 20px;
 	}
 	.projects{
-		padding:10px;
+		overflow-x: scroll;
 		float: right;
 		@media (min-width:$desk-width){
+			padding:10px;
 			width: 650px;
-		}	
+		}
+			
 	}
 
 	.period{
 		padding:10px;
 		float: right;
 		margin-top: 100px;
-		//overflow-x: scroll;
+		
 		@media (min-width:$desk-width){
 			width: 650px;
-		}	
+		}
+		.title{
+			width: 100%;
+			display: inline-block;
+			float: right;
+		}
+		h2{
+			
+			display: inline-block;
+			margin-left: 40px;
+		}
+		.imgs{
+			display: inline-block;
+			width: 100%;
+		}
 	}
 
 	.img{

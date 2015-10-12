@@ -58,16 +58,16 @@
 	}
 
 	.lights{
-		padding:10px;
-		text-align: center;
-		display: inline-block;
-		
+			display: none;
 		@media (min-width:$tablet-width){
 			margin-left: 150px;
+			padding:10px;
+			text-align: center;
+			display: inline-block;
+				
 		}
-
 		.light{
-			padding:0 10px;
+			padding:0 5px;
 			float: right;
 			cursor: pointer;
 			display: inline-block;
@@ -75,8 +75,11 @@
 			opacity: 0;
 			transition: all ease .3s;
 			padding-bottom:5px;
+			width: 67px;
+
 			@media (min-width:$tablet-width){
 				margin-left: 50px;
+				padding:0 10px;
 			}
 
 			
@@ -107,6 +110,47 @@
 		img{
 			width: 50px;
 		}		
+	}
+
+	.mobile-lights{
+		display: inline-block;
+		margin-left: 120px;
+
+		.m-light{
+			position:absolute;
+			top:0;
+			padding:0 5px;
+			float: right;
+			cursor: pointer;
+			text-align: center;
+			display: block;
+			width: 67px;
+			transform: translateY(-200%);
+			opacity: 0;
+			transition: all ease .3s;
+			&.choose{
+				transform: translateY(10%);
+				opacity: 1;
+				transition: all ease .3s;
+			}
+
+			&.switch{
+				transform: translateY(-200%);
+				transition: all ease .3s;
+			}
+			&.move-in{
+				transform: translateY(0%);
+				transition: all ease .1s;
+			}	
+			
+		}
+		img{
+			width: 50px;
+		}
+		p{
+			margin: 0;
+		}
+		
 	}
 }
 
