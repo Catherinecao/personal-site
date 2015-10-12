@@ -35,6 +35,7 @@ $(document).ready(function(){
 		$contact.toggleClass('slide');
 	});
 
+
 	//about page
 	$aboutBtn.click(function(e){
 		e.preventDefault();

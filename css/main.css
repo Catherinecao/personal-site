@@ -349,6 +349,12 @@ button {
     font-family: 'Architects Daughter', cursive;
     text-shadow: 1px 1px 1px gray;
     margin-bottom: 20px; }
+  .project-content .projects {
+    padding: 10px;
+    float: right; }
+    @media (min-width: 960px) {
+      .project-content .projects {
+        width: 650px; } }
   .project-content .period {
     padding: 10px;
     float: right;

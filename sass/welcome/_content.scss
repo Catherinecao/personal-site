@@ -47,6 +47,13 @@
 		text-shadow: $dropshadow-title;
 		margin-bottom: 20px;
 	}
+	.projects{
+		padding:10px;
+		float: right;
+		@media (min-width:$desk-width){
+			width: 650px;
+		}	
+	}
 
 	.period{
 		padding:10px;
