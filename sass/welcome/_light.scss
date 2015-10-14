@@ -157,15 +157,31 @@
 
 
 .lean{
+	// position:absolute;
+	// bottom:320px;
+	// left:-30px;
+}
+.triangle{
 	position:absolute;
 	bottom:320px;
 	left:-30px;
-}
-.triangle{
 	border-left: 350px solid transparent;
 	border-bottom: 350px solid transparent; 	
 	border-right:370px solid $black;
-	transform:rotate(150deg);
+	transform:rotateZ(150deg);
+}
+.triangle-right{
+	display:none;
+	@media (min-width:$desk-width){
+		display: block;
+		position:absolute;
+		bottom:380px;
+		right:-300px;
+		border-left: 350px solid transparent;
+		border-bottom: 350px solid transparent; 	
+		border-right:390px solid $black;
+		transform:rotateZ(125deg);
+	}
 }
 
 .bg-lights{
@@ -194,14 +210,17 @@
 			position: absolute;
 			margin-right: 180px;
 			margin-top: 22px;
-			width: 350px;
+			width: 340px;
 		}
 		@media (min-width:$large-width){
-			margin-right: 140px;
+			margin-top: 75px;
+			margin-right: 650px;
+			width: 350px;
 		}
 	}
 
 	.left-lights{
+
 		@media (min-width:$tablet-width){
 			margin-top: 25px;
 			position: absolute;
@@ -216,10 +235,12 @@
 			top: 0;
 			left: 0;
 			margin-left: 300px;
-			width: 350px; 
+			width: 340px; 
 		}
 		@media (min-width:$large-width){
-			margin-left: 200px;
+			margin-top: 85px;
+			margin-left: 750px;
+			width: 350px;
 		}
 	}	
 }

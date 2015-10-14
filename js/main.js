@@ -61,6 +61,10 @@ $(document).ready(function(){
 		aboutHide();
 		aboutLightShow();
 
+		$mProjectContral.removeClass('move-in');
+		$mPBtn.removeClass('choose');
+		$mNBtn.removeClass('choose');
+
 	});
 
 	//prpject
@@ -123,7 +127,13 @@ $(document).ready(function(){
 	});
 
 	function aboutShow (){
-		$aboutPage.animate({left:$screenWidth*0.7+20},{duration:movingTime},"easeOutBounce");
+		if($screenWidth < 768){
+			$aboutPage.animate({left:$screenWidth*0.7+20},{duration:movingTime},"easeOutBounce");
+		}else if($screenWidth < 1200){
+			$aboutPage.animate({left:$screenWidth*0.7+100},{duration:movingTime},"easeOutBounce");
+		}else{
+			$aboutPage.animate({left:$screenWidth*0.7+80},{duration:movingTime},"easeOutBounce");
+		}
 	}
 
 	function aboutHide (){
@@ -132,9 +142,11 @@ $(document).ready(function(){
 
 	function aboutLightHide (){
 		$aboutLight.animate({top:$screenHeight},{duration:300},"easeInBack");
+		$bgImg.animate({opacity:0},200,"easeOutExpo");
 	}
 	function aboutLightShow (){
 		$aboutLight.animate({top:0},{duration:300},"easeInBack");
+		$bgImg.animate({opacity:1},200,"easeOutExpo");
 	}
 
 	function btnShow (){
@@ -180,14 +192,14 @@ $(document).ready(function(){
 			{opacity:0,top:0},
 			{duration:{opacity:100,top:200},
 			specialEasing:{opacity:'easeOutExpo',top:'easeOutBounce'}}).removeClass('move-in');
-
-		$mProjectContral.addClass('move-in');
-		$mPBtn.removeClass('choose');
-		$mNBtn.removeClass('choose');
 	}
 
 	function projectShow (){
-		$projectPage.animate({left:$screenWidth*0.7+20},{duration:movingTime},"easeOutBounce");
+		if($screenWidth < 768){
+			$projectPage.animate({left:$screenWidth*0.7+20},{duration:movingTime},"easeOutBounce");
+		}else{
+			$projectPage.animate({left:$screenWidth*0.7+100},{duration:movingTime},"easeOutBounce");
+		}
 		projectContralShow();
 
 

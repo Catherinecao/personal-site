@@ -3,9 +3,12 @@
 	top:0;
 	transform:translateX(-110%);
 	position:absolute;
-	width:75%;
+	width:80%;
 	box-shadow:$dropshadow;
 	z-index:200;
+	@media (min-width:$large-width){
+		width:90%;
+	}
 
 	.content{
 		float: right;
@@ -37,11 +40,14 @@
 	top:0;
 	transform:translateX(-110%);
 	position:absolute;
-	width:75%;
+	width:80%;
 	box-shadow:$dropshadow;
 	z-index:200;
 	height:100vh;
 	overflow: auto;
+	@media (min-width:$large-width){
+		width:90%;
+	}
 
 	h2{
 		color:$black;
@@ -76,6 +82,12 @@
 			
 			display: inline-block;
 			margin-left: 40px;
+			@media (min-width:$tablet-width){
+				margin-left: 180px;
+			}
+			@media (min-width:$desk-width){
+				margin-left: 0;
+			}
 		}
 		.imgs{
 			display: inline-block;

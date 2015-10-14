@@ -100,24 +100,29 @@ button {
       .nav .lights {
         margin-left: 150px;
         padding: 10px;
-        text-align: center;
         display: inline-block; } }
     .nav .lights .light {
       padding: 0 5px;
-      float: right;
       cursor: pointer;
       display: inline-block;
       transform: translateY(-200%);
       opacity: 0;
       transition: all ease .3s;
-      padding-bottom: 5px;
-      width: 67px; }
+      padding-bottom: 5px; }
       @media (min-width: 640px) {
         .nav .lights .light {
           margin-left: 50px;
           padding: 0 10px; } }
+      .nav .lights .light img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto; }
+      .nav .lights .light #lighten {
+        opacity: 0;
+        margin-top: -87.25px; }
       .nav .lights .light p {
-        margin: 0; }
+        margin: 0;
+        text-align: center; }
       .nav .lights .light.active {
         transform: translateY(0%);
         opacity: 1;
@@ -132,12 +137,19 @@ button {
         .nav .lights .light.hover p {
           text-shadow: 1px 1px 1px black; }
         .nav .lights .light.hover img {
-          filter: invert(50%) drop-shadow(1px 1px 1px black); }
+          filter: drop-shadow(1px 1px 1px black); }
+        .nav .lights .light.hover #lighten {
+          opacity: 1; }
+        .nav .lights .light.hover #dark {
+          opacity: 0; }
     .nav .lights img {
       width: 50px; }
   .nav .mobile-lights {
     display: inline-block;
     margin-left: 120px; }
+    @media (min-width: 640px) {
+      .nav .mobile-lights {
+        display: none; } }
     .nav .mobile-lights .m-light {
       position: absolute;
       top: 0;
@@ -146,7 +158,7 @@ button {
       cursor: pointer;
       text-align: center;
       display: block;
-      width: 67px;
+      width: 75px;
       transform: translateY(-200%);
       opacity: 0;
       transition: all ease .3s; }
@@ -287,16 +299,27 @@ button {
   .contact .message-box {
     height: 300px; }
 
-.lean {
+.triangle {
   position: absolute;
   bottom: 320px;
-  left: -30px; }
-
-.triangle {
+  left: -30px;
   border-left: 350px solid transparent;
   border-bottom: 350px solid transparent;
   border-right: 370px solid #001011;
-  transform: rotate(150deg); }
+  transform: rotateZ(150deg); }
+
+.triangle-right {
+  display: none; }
+  @media (min-width: 960px) {
+    .triangle-right {
+      display: block;
+      position: absolute;
+      bottom: 380px;
+      right: -300px;
+      border-left: 350px solid transparent;
+      border-bottom: 350px solid transparent;
+      border-right: 390px solid #001011;
+      transform: rotateZ(125deg); } }
 
 .bg-lights {
   display: none; }
@@ -321,10 +344,12 @@ button {
       position: absolute;
       margin-right: 180px;
       margin-top: 22px;
-      width: 350px; } }
+      width: 340px; } }
   @media (min-width: 1200px) {
     .bg-lights .right-lights {
-      margin-right: 140px; } }
+      margin-top: 75px;
+      margin-right: 650px;
+      width: 350px; } }
   @media (min-width: 640px) {
     .bg-lights .left-lights {
       margin-top: 25px;
@@ -340,19 +365,24 @@ button {
       top: 0;
       left: 0;
       margin-left: 300px;
-      width: 350px; } }
+      width: 340px; } }
   @media (min-width: 1200px) {
     .bg-lights .left-lights {
-      margin-left: 200px; } }
+      margin-top: 85px;
+      margin-left: 750px;
+      width: 350px; } }
 
 .about-content {
   background-color: #FFFFFC;
   top: 0;
   transform: translateX(-110%);
   position: absolute;
-  width: 75%;
+  width: 80%;
   box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.3);
   z-index: 200; }
+  @media (min-width: 1200px) {
+    .about-content {
+      width: 90%; } }
   .about-content .content {
     float: right;
     text-align: left;
@@ -376,11 +406,14 @@ button {
   top: 0;
   transform: translateX(-110%);
   position: absolute;
-  width: 75%;
+  width: 80%;
   box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.3);
   z-index: 200;
   height: 100vh;
   overflow: auto; }
+  @media (min-width: 1200px) {
+    .project-content {
+      width: 90%; } }
   .project-content h2 {
     color: #001011;
     font-family: 'Architects Daughter', cursive;
@@ -407,6 +440,12 @@ button {
     .project-content .period h2 {
       display: inline-block;
       margin-left: 40px; }
+      @media (min-width: 640px) {
+        .project-content .period h2 {
+          margin-left: 180px; } }
+      @media (min-width: 960px) {
+        .project-content .period h2 {
+          margin-left: 0; } }
     .project-content .period .imgs {
       display: inline-block;
       width: 100%; }
@@ -422,5 +461,47 @@ button {
     @media (min-width: 640px) {
       .project-content .img {
         display: inline-block; } }
+
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  background-color: #001011;
+  height: 100vh;
+  width: 100%; }
+  .overlay .close {
+    color: #FFFFFC;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-bottom: 20px; }
+    @media (min-width: 640px) {
+      .overlay .close {
+        right: 10px; } }
+    @media (min-width: 960px) {
+      .overlay .close {
+        right: 10px; } }
+    @media (min-width: 1200px) {
+      .overlay .close {
+        right: 20%; } }
+  .overlay .content {
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #FFFFFC;
+    width: 100%; }
+    .overlay .content .slider {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      overflow: hidden; }
+      .overlay .content .slider .gallary {
+        width: 400%;
+        display: inline-block;
+        height: 500px; }
+        .overlay .content .slider .gallary .img {
+          float: left;
+          width: 930px;
+          height: 500px;
+          background-color: #F5BB00; }
 
 /*# sourceMappingURL=main.css.map */
