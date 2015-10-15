@@ -1,3 +1,4 @@
+
 .main{
 	position: fixed;
 	// bottom:400px;
@@ -122,39 +123,63 @@
 
 .contact{
 	font-family: 'Architects Daughter', cursive;
-	transform:translateY(300px);
+	transform:translateY(350px);
 	transition: all ease .5s;
 	position:absolute;
 	bottom:0;
-	left:10px;
+	left:0;
 	display:inline-block;
 	width:100%;
 	background-color:$black;
 	color:$white;
 	z-index:300;
+	form{
+		display: none;
+		color:$white;
+		p{
+			margin: 0;
+			font-size: 20px;
+			font-family: 'Architects Daughter', cursive;
+
+		}
+		.status{
+			color:$red;
+
+		}
+		textarea{
+			width: 100%;
+			background-color:$black;
+			color:$white;
+			border:1px solid $white;
+			padding:5px;
+			font-size:20px;
+			height: 100px;
+		}
+		input[type=submit]{
+			background-color:$red;
+			float: right;
+			width: 50%;
+			margin-top:20px;
+		}
+		input[type=reset]{
+			float: left;
+			width: 50%;
+			margin-top:20px;
+		}
+	}
+
+
 	&.slide{
-<<<<<<< Updated upstream
 		transform:translateY(0px);
-=======
-		transform:translateY(20px);
->>>>>>> Stashed changes
 		//bottom: 0;
 		transition: all ease .5s;
+		form{
+			display: block;
+		}
 	}
 
 	.contact-title{
 		cursor:pointer;
-		// display: inline-block;
-		// h2{
-		// 	float: left;
-		// }
-		// p{
-		// 	float: left;
-		// 	margin-left:20px;
-		// 	font-family: 'Architects Daughter', cursive;
-		// 	color:$gray;
-		// 	font-size: 20px;
-		// }
 	}
 	h2{
 		margin: 0;
@@ -164,49 +189,20 @@
 		font-family: 'Slackey', cursive;
 	}
 	.message-box{
-		height: 300px;
-	}
-	
-	.btns{
-		width: 100%;
-		display: inline-block;
-	}
+		height: 350px;
 
-	input[type=submit],input[type=reset],button#submit{
-	    width:48%;
-	    height:35px;
-	    border:none;
-	    font-family: 'Slackey', cursive;
-	    border-radius: 5px;
-	    margin-top: 10px;
-	    
-	    display: inline-block;
-	}
-	input[type=submit]{
-		float: right;
-		background-color:$red;
-		color:$white;
-	}
-	input[type=reset]{
-		float: left;
-		background-color:$theme-color;
-		color:$black;
-	}
-	.status{
-		display: none;
-		@media (min-width:$tablet-width){
-			display: inline-block;
-		}
 	}
 }
 
 
 .lean{
-	//position:relative;
+	// position:absolute;
+	// bottom:320px;
+	// left:-30px;
 }
 .triangle{
 	position:absolute;
-	//bottom:320px;
+	bottom:370px;
 	left:-30px;
 	border-left: 350px solid transparent;
 	border-bottom: 350px solid transparent; 	
@@ -218,7 +214,7 @@
 	@media (min-width:$desk-width){
 		display: block;
 		position:absolute;
-		bottom:370px;
+		bottom:430px;
 		right:-300px;
 		border-left: 350px solid transparent;
 		border-bottom: 350px solid transparent; 	

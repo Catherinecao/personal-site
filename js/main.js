@@ -20,6 +20,7 @@ $(document).ready(function(){
 		$mNBtn = $('#n-btn-m'),
 		$nBtn = $('#n-btn'),
 		$bgImg = $('.bg-lights'),
+		$paperPlane = $('.paper-plane'),
 		$screenHeight = window.innerHeight,
 		$screenWidth = window.innerWidth,
 		movingTime = 600;
@@ -30,9 +31,8 @@ $(document).ready(function(){
 	$light.css({"bottom":$screenHeight-80});
 	$lightBar.css({"height":$screenHeight-80});
 	$bgImg.css({"margin-top":$screenHeight*0.3});
-	$('.message-box').hide();
 
-	//$('.contact-form').formValidation();
+	$('.contact-form').formValidation();
 
 
 	
@@ -131,7 +131,7 @@ $(document).ready(function(){
 
 	function aboutShow (){
 		if($screenWidth < 768){
-			$aboutPage.animate({left:$screenWidth*0.7+20},{duration:movingTime},"easeOutBounce");
+			$aboutPage.animate({left:$screenWidth*0.7+30},{duration:movingTime},"easeOutBounce");
 		}else if($screenWidth < 1200){
 			$aboutPage.animate({left:$screenWidth*0.7+100},{duration:movingTime},"easeOutBounce");
 		}else{
