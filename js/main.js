@@ -30,6 +30,9 @@ $(document).ready(function(){
 	$light.css({"bottom":$screenHeight-80});
 	$lightBar.css({"height":$screenHeight-80});
 	$bgImg.css({"margin-top":$screenHeight*0.3});
+	$('.message-box').hide();
+
+	//$('.contact-form').formValidation();
 
 
 	

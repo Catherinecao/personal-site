@@ -11,8 +11,22 @@ body{
 input{
 	border:0;
 	background-color:$black;
-	border-bottom:2px solid $white;
+	border-bottom:1px solid $white;
 	width:100%;
+	color:$white;
+	font-family: 'Comfortaa', cursive;
+	font-size:18px;
+	padding:3px;
+}
+textarea{
+	border:0;
+	background-color:$black;
+	border:2px solid $white;
+	width:100%;
+	color:$white;
+	font-family: 'Comfortaa', cursive;
+	font-size:1em;
+	padding:3px;
 }
 
 
