@@ -275,7 +275,7 @@ button {
 
 .contact {
   font-family: 'Architects Daughter', cursive;
-  transform: translateY(0);
+  transform: translateY(300px);
   transition: all ease .5s;
   position: absolute;
   bottom: 0;
@@ -286,7 +286,7 @@ button {
   color: #FFFFFC;
   z-index: 300; }
   .contact.slide {
-    transform: translateY(0%);
+    transform: translateY(0px);
     transition: all ease .5s; }
   .contact .contact-title {
     cursor: pointer; }
@@ -296,7 +296,7 @@ button {
     margin-top: 10px;
     display: inline-block;
     font-family: 'Slackey', cursive; }
-  .contact .contact-form {
+  .contact .message-box {
     height: 300px; }
 
 .triangle {
