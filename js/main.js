@@ -245,4 +245,10 @@ $(document).ready(function(){
 		);
 	}
 
+	//paper plane
+	function flyingPlane (){
+
+	TweenMax.to($paperPlane,5,{right:$screenWidth,bottom:$screenHeight*0.25,top:$screenHeight*0.25,scale:0.5,rotation:300,ease: Power4.easeOut});
+	}
+
 });

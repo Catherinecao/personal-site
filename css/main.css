@@ -492,6 +492,15 @@ button {
       .project-content .img {
         display: inline-block; } }
 
+.paper-plane {
+  position: absolute;
+  right: -200px;
+  top: 100px;
+  transform: rotate(200deg); }
+  @media (min-width: 640px) {
+    .paper-plane {
+      bottom: 200px; } }
+
 .overlay {
   display: none;
   position: fixed;

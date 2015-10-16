@@ -111,3 +111,13 @@
 		}
 	}	
 }
+
+.paper-plane{
+	position:absolute;
+	right: -200px;
+	top:100px;
+	transform: rotate(200deg);
+	@media (min-width:$tablet-width){
+		bottom:200px;
+	}
+}
