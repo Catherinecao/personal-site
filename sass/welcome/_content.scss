@@ -5,7 +5,7 @@
 	position:absolute;
 	width:80%;
 	box-shadow:$dropshadow;
-	z-index:200;
+	z-index:301;
 	@media (min-width:$large-width){
 		width:90%;
 	}
@@ -42,7 +42,7 @@
 	position:absolute;
 	width:80%;
 	box-shadow:$dropshadow;
-	z-index:200;
+	z-index:301;
 	height:100vh;
 	overflow: auto;
 	@media (min-width:$large-width){
@@ -54,10 +54,13 @@
 		font-family: 'Architects Daughter', cursive;
 		text-shadow: $dropshadow-title;
 		margin-bottom: 20px;
+
 	}
 	.projects{
-		overflow-x: scroll;
+		position:relative;
 		float: right;
+		overflow-x: hidden;
+  		overflow-y: auto;
 		@media (min-width:$desk-width){
 			padding:10px;
 			width: 650px;
@@ -69,19 +72,20 @@
 		padding:10px;
 		float: right;
 		margin-top: 100px;
+		margin-bottom: 100px;
 		
 		@media (min-width:$desk-width){
 			width: 650px;
 		}
-		.title{
-			width: 100%;
-			display: inline-block;
-			float: right;
-		}
+		// .title{
+		// 	width: 100%;
+		// 	display: inline-block;
+		// 	float: right;
+		// }
 		h2{
 			
 			display: inline-block;
-			margin-left: 40px;
+			margin-left: 60px;
 			@media (min-width:$tablet-width){
 				margin-left: 180px;
 			}
@@ -92,10 +96,19 @@
 		.imgs{
 			display: inline-block;
 			width: 100%;
+			cursor:pointer;
+
+			#m-h{
+				display: none;
+				@media (min-width:$tablet-width){
+					display: block;
+				}
+			}
 		}
+
 	}
 
-	.img{
+	.img-s{
 		float: right;
 		width: 200px;
 		height: 150px;

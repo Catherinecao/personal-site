@@ -19,11 +19,18 @@ $(document).ready(function(){
 		$mPBtn = $('#p-btn-m'),
 		$mNBtn = $('#n-btn-m'),
 		$nBtn = $('#n-btn'),
+		$projects = $('.projects'),
 		$bgImg = $('.bg-lights'),
 		$paperPlane = $('.paper-plane'),
+		$overlay = $('.overlay'),
+		$overlayClose = $('.close'),
+		$imgContainer = $('.gallary'),
+		$img = $('.img-show:gt(0)'),
+		$singleProject = $('.img-s'),
 		$screenHeight = window.innerHeight,
 		$screenWidth = window.innerWidth,
-		movingTime = 600;
+		movingTime = 600,
+		slideshowInterval;
 
 
 	//initialize
@@ -40,7 +47,7 @@ $(document).ready(function(){
 	$contactTitle.click(function(e){
 		e.preventDefault();
 	
-		$contact.toggleClass('slide');
+		$contact.toggleClass('open');
 	});
 
 
@@ -81,6 +88,14 @@ $(document).ready(function(){
 		$mProjectContral.removeClass('move-in');
 		$mPBtn.addClass('choose');
 
+		$nBtn.addClass('hover');
+		$pBtn.removeClass('hover');
+		if($screenWidth < 768){
+			$projects.css({marginTop:-850});
+		}else{
+			$projects.css({marginTop:-520});
+		}
+
 
 	});
 
@@ -106,28 +121,60 @@ $(document).ready(function(){
 		aboutLightHide();
 
 		btnPShow();	
-		$mPBtn.addClass('choose');	
+		$mPBtn.addClass('choose');
+		$nBtn.addClass('hover');
+		if($screenWidth < 768){
+			$projects.css({marginTop:-850});
+		}else{
+			$projects.css({marginTop:-520});
+		}
+			
 	});
 
 	//project scrolling
 	$mPBtn.click(function(){
 		$(this).removeClass('choose');
 		$mNBtn.addClass('choose');
+		$projects.animate({marginTop:-40});
 	});
 
 	$mNBtn.click(function(){
 		$(this).removeClass('choose');
 		$mPBtn.addClass('choose');
+		$projects.animate({marginTop:-850});
 	});
 
 	$pBtn.click(function(){	
 		$(this).addClass('hover');
 		$nBtn.removeClass('hover');
+		$projects.animate({marginTop:100});
 	});
 	$nBtn.click(function(){
 		$(this).addClass('hover');
 		$pBtn.removeClass('hover');
+		$projects.animate({marginTop:-520});
 	});
+
+
+	// individual project auto slideshow
+
+	$singleProject.click(function(){
+		alert($img.length)
+		$img.hide();
+		$overlay.fadeIn(function(){
+		autoSlideShow();	
+		});
+	});
+	$overlayClose.click(function(){ 
+		$overlay.fadeOut(300);
+		clearInterval(slideshowInterval);
+	});
+
+	function autoSlideShow (){
+		slideshowInterval = setInterval(function(){
+			$('.gallary > div:first').fadeOut(500).next().fadeIn(500).end().appendTo($imgContainer);
+		},5000);
+	}
 
 	function aboutShow (){
 		if($screenWidth < 768){
