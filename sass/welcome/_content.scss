@@ -127,9 +127,9 @@
 
 .paper-plane{
 	position:absolute;
-	right: -200px;
+	right: -350px;
 	top:100px;
-	transform: rotate(200deg);
+	transform:rotate(280deg);
 	@media (min-width:$tablet-width){
 		bottom:200px;
 	}

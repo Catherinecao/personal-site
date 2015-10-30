@@ -15,7 +15,8 @@ function isValidEmail(email) {
 				$reset = $form.find('input[type=reset]'),
 				$fields = $form.find('input[type=text], textarea'),
 				$screenHeight = window.innerHeight,
-				$screenWidth = window.innerWidth;
+				$screenWidth = window.innerWidth,
+				paperFlyShow;
 
 			function setError(errorMessage, $field){
 				$status.html(errorMessage).slideDown(300);
@@ -29,9 +30,9 @@ function isValidEmail(email) {
             	e.preventDefault();
             	$fields.removeClass('error');
 
+
 				if(!$name.val()){                     
 					setError("May I have your name?", $name);
-					flyingPlane();
 				}else if(!$email.val()){
 					setError("May I have your email?", $email);
 				}else if(!isValidEmail($email.val())){
@@ -48,7 +49,6 @@ function isValidEmail(email) {
 					$.post("send-mail.php", formData, function(sent){
 						if(sent){
 							$status.html("Thank you"+" "+$name.val()+", your message has been sent");
-							flyingPlane();
 						}else{
 							$status.html("Oops, something wrong. Please try agian.")
 						}
@@ -63,17 +63,7 @@ function isValidEmail(email) {
 
 		});
 
-		function flyingPlane (){
-			var $screenHeight = window.innerHeight,
-				$screenWidth = window.innerWidth;
-
-				if($screenWidth < 768){
-					TweenMax.to($('.paper-plane'),4,{right:$screenWidth+200,bottom:$screenHeight,scale:0.2,rotation:-100,ease: Power4.easeOut});
-				}else{
-					TweenMax.to($('.paper-plane'),5,{right:$screenWidth+200,bottom:$screenHeight,scale:0.3,rotation:280,ease: Power4.easeOut});
-				}
-			
-			}
+		
 	}
 
 	

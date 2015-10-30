@@ -30,7 +30,8 @@ $(document).ready(function(){
 		$screenHeight = window.innerHeight,
 		$screenWidth = window.innerWidth,
 		movingTime = 600,
-		slideshowInterval;
+		slideshowInterval,
+		paperFlyShow;
 
 
 	//initialize
@@ -123,6 +124,7 @@ $(document).ready(function(){
 		btnPShow();	
 		$mPBtn.addClass('choose');
 		$nBtn.addClass('hover');
+		$pBtn.removeClass('hover');
 		if($screenWidth < 768){
 			$projects.css({marginTop:-850});
 		}else{
@@ -159,7 +161,6 @@ $(document).ready(function(){
 	// individual project auto slideshow
 
 	$singleProject.click(function(){
-		alert($img.length)
 		$img.hide();
 		$overlay.fadeIn(function(){
 		autoSlideShow();	
@@ -293,9 +294,17 @@ $(document).ready(function(){
 	}
 
 	//paper plane
-	function flyingPlane (){
 
-	TweenMax.to($paperPlane,5,{right:$screenWidth,bottom:$screenHeight*0.25,top:$screenHeight*0.25,scale:0.5,rotation:300,ease: Power4.easeOut});
-	}
+	var $sendBtn = $('#send-btn'),
+		tl = new TimelineMax();
+
+	$sendBtn.click(function(){
+		if($screenWidth < 768){
+			var flyingPlaneM = tl.to($paperPlane,4,{right:$screenWidth+200,bottom:$screenHeight,scale:0.2,rotation:-100,ease: Power4.easeOut}).restart();
+		}else{
+						
+		var flyingPlaneD = tl.to($paperPlane,2.5,{right:$screenWidth*0.6,bottom:$screenHeight*0.7,scale:0.7,rotation:200,ease: SlowMo.ease.config( 0.1, 0.5, false)}).to($paperPlane,3.5,{right:$screenWidth+200,bottom:$screenHeight,scale:0.3,rotation:280,ease: Power4.easeOut}).restart();
+		}
+	});
 
 });
