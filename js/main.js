@@ -29,7 +29,8 @@ $(document).ready(function(){
 		$singleProject = $('.img-s'),
 		$screenHeight = window.innerHeight,
 		$screenWidth = window.innerWidth,
-		movingTime = 600,
+		$navBg = $('.m-nav-bg'),
+		movingTime = 400,
 		slideshowInterval,
 		paperFlyShow;
 
@@ -41,6 +42,7 @@ $(document).ready(function(){
 	$bgImg.css({"margin-top":$screenHeight*0.3});
 
 	$('.contact-form').formValidation();
+
 
 
 	
@@ -92,9 +94,9 @@ $(document).ready(function(){
 		$nBtn.addClass('hover');
 		$pBtn.removeClass('hover');
 		if($screenWidth < 768){
-			$projects.css({marginTop:-850});
+			$projects.css({marginTop:-780});
 		}else{
-			$projects.css({marginTop:-520});
+			$projects.css({marginTop:-750});
 		}
 
 
@@ -117,6 +119,7 @@ $(document).ready(function(){
 		e.preventDefault();
 
 		projectShow();
+
 		
 
 		aboutLightHide();
@@ -126,9 +129,9 @@ $(document).ready(function(){
 		$nBtn.addClass('hover');
 		$pBtn.removeClass('hover');
 		if($screenWidth < 768){
-			$projects.css({marginTop:-850});
+			$projects.css({marginTop:-780});
 		}else{
-			$projects.css({marginTop:-520});
+			$projects.css({marginTop:-750});	
 		}
 			
 	});
@@ -143,18 +146,18 @@ $(document).ready(function(){
 	$mNBtn.click(function(){
 		$(this).removeClass('choose');
 		$mPBtn.addClass('choose');
-		$projects.animate({marginTop:-850});
+		$projects.animate({marginTop:-780});
 	});
 
 	$pBtn.click(function(){	
 		$(this).addClass('hover');
 		$nBtn.removeClass('hover');
-		$projects.animate({marginTop:100});
+		$projects.animate({marginTop:10});
 	});
 	$nBtn.click(function(){
 		$(this).addClass('hover');
 		$pBtn.removeClass('hover');
-		$projects.animate({marginTop:-520});
+		$projects.animate({marginTop:-750});
 	});
 
 
@@ -179,7 +182,7 @@ $(document).ready(function(){
 
 	function aboutShow (){
 		if($screenWidth < 768){
-			$aboutPage.animate({left:$screenWidth*0.7+30},{duration:movingTime},"easeOutBounce");
+			$aboutPage.animate({left:$screenWidth+20},{duration:movingTime},"easeOutBounce");
 		}else if($screenWidth < 1200){
 			$aboutPage.animate({left:$screenWidth*0.7+100},{duration:movingTime},"easeOutBounce");
 		}else{
@@ -247,7 +250,7 @@ $(document).ready(function(){
 
 	function projectShow (){
 		if($screenWidth < 768){
-			$projectPage.animate({left:$screenWidth*0.7+20},{duration:movingTime},"easeOutBounce");
+			$projectPage.animate({left:$screenWidth+20},{duration:movingTime},"easeOutBounce");
 		}else{
 			$projectPage.animate({left:$screenWidth*0.7+100},{duration:movingTime},"easeOutBounce");
 		}
@@ -298,12 +301,13 @@ $(document).ready(function(){
 	var $sendBtn = $('#send-btn'),
 		tl = new TimelineMax();
 
-	$sendBtn.click(function(){
+	$('.contact-form').bind("sent",function(){
+		
 		if($screenWidth < 768){
-			var flyingPlaneM = tl.to($paperPlane,4,{right:$screenWidth+200,bottom:$screenHeight,scale:0.2,rotation:-100,ease: Power4.easeOut}).restart();
+			var flyingPlaneM = tl.to($paperPlane,4,{right:$screenWidth+200,bottom:$screenHeight,scale:0.2,rotation:-100,ease: Power4.easeOut});
 		}else{
 						
-		var flyingPlaneD = tl.to($paperPlane,2.5,{right:$screenWidth*0.6,bottom:$screenHeight*0.7,scale:0.7,rotation:200,ease: SlowMo.ease.config( 0.1, 0.5, false)}).to($paperPlane,3.5,{right:$screenWidth+200,bottom:$screenHeight,scale:0.3,rotation:280,ease: Power4.easeOut}).restart();
+		var flyingPlaneD = tl.to($paperPlane,2.5,{right:$screenWidth*0.6,bottom:$screenHeight*0.7,scale:0.7,rotation:200,ease: SlowMo.ease.config( 0.1, 0.5, false)}).to($paperPlane,3.5,{right:$screenWidth+200,bottom:$screenHeight,scale:0.3,rotation:280,ease: Power4.easeOut});
 		}
 	});
 

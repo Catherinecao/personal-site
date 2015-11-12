@@ -43,12 +43,14 @@ function isValidEmail(email) {
 					setError("You have spammed me", $spam);
 				}else{
 					$status.html("Email being sent... Please wait").slideDown(300);
+					$form.trigger("sent");
 				               
 					//send mail
 					var formData = $form.serialize();
 					$.post("send-mail.php", formData, function(sent){
 						if(sent){
 							$status.html("Thank you"+" "+$name.val()+", your message has been sent");
+
 						}else{
 							$status.html("Oops, something wrong. Please try agian.")
 						}

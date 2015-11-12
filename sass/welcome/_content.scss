@@ -3,7 +3,7 @@
 	top:0;
 	transform:translateX(-110%);
 	position:absolute;
-	width:80%;
+	width:100%;
 	box-shadow:$dropshadow;
 	z-index:301;
 	@media (min-width:$large-width){
@@ -40,7 +40,7 @@
 	top:0;
 	transform:translateX(-110%);
 	position:absolute;
-	width:80%;
+	width:100%;
 	box-shadow:$dropshadow;
 	z-index:301;
 	height:100vh;
@@ -72,7 +72,7 @@
 		padding:10px;
 		float: right;
 		margin-top: 100px;
-		margin-bottom: 100px;
+		margin-bottom: 200px;
 		
 		@media (min-width:$desk-width){
 			width: 650px;
@@ -96,33 +96,24 @@
 		.imgs{
 			display: inline-block;
 			width: 100%;
-			cursor:pointer;
-
-			#m-h{
-				display: none;
-				@media (min-width:$tablet-width){
-					display: block;
-				}
-			}
+			
 		}
 
 	}
 
-	.img-s{
-		float: right;
-		width: 200px;
-		height: 150px;
-		margin-left: auto;
-		margin-right: auto;
-		background-color:$black;
-		margin-right: 10px;
-		margin-bottom: 10px;
+	
 
-
+	.m{
+		display: none;
 		@media (min-width:$tablet-width){
 			display: inline-block;
 		}
-	}	
+	}
+	.s{
+		@media (min-width:$tablet-width){
+			display: none;
+		}
+	}
 }
 
 .paper-plane{
