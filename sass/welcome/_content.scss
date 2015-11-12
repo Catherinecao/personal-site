@@ -44,7 +44,7 @@
 	box-shadow:$dropshadow;
 	z-index:301;
 	height:100vh;
-	overflow: auto;
+	overflow: hidden;
 	@media (min-width:$large-width){
 		width:90%;
 	}
@@ -59,8 +59,7 @@
 	.projects{
 		position:relative;
 		float: right;
-		overflow-x: hidden;
-  		overflow-y: auto;
+		overflow: hidden;
 		@media (min-width:$desk-width){
 			padding:10px;
 			width: 650px;
@@ -96,6 +95,9 @@
 		.imgs{
 			display: inline-block;
 			width: 100%;
+			@media (min-width:$tablet-width){
+				width: 100%;
+			}
 			
 		}
 

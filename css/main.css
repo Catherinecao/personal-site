@@ -452,7 +452,7 @@ button {
   box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.3);
   z-index: 301;
   height: 100vh;
-  overflow: auto; }
+  overflow: hidden; }
   @media (min-width: 1200px) {
     .project-content {
       width: 90%; } }
@@ -464,8 +464,7 @@ button {
   .project-content .projects {
     position: relative;
     float: right;
-    overflow-x: hidden;
-    overflow-y: auto; }
+    overflow: hidden; }
     @media (min-width: 960px) {
       .project-content .projects {
         padding: 10px;
@@ -490,6 +489,9 @@ button {
     .project-content .period .imgs {
       display: inline-block;
       width: 100%; }
+      @media (min-width: 640px) {
+        .project-content .period .imgs {
+          width: 100%; } }
   .project-content .m {
     display: none; }
     @media (min-width: 640px) {
@@ -510,7 +512,7 @@ button {
 
 .img-s {
   float: right;
-  width: 200px;
+  width: 147px;
   height: 147px;
   margin-left: auto;
   margin-right: auto;

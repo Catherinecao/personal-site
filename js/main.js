@@ -94,7 +94,7 @@ $(document).ready(function(){
 		$nBtn.addClass('hover');
 		$pBtn.removeClass('hover');
 		if($screenWidth < 768){
-			$projects.css({marginTop:-780});
+			$projects.css({marginTop:-580});
 		}else{
 			$projects.css({marginTop:-750});
 		}
@@ -129,7 +129,7 @@ $(document).ready(function(){
 		$nBtn.addClass('hover');
 		$pBtn.removeClass('hover');
 		if($screenWidth < 768){
-			$projects.css({marginTop:-780});
+			$projects.css({marginTop:-580});
 		}else{
 			$projects.css({marginTop:-750});	
 		}
@@ -146,7 +146,7 @@ $(document).ready(function(){
 	$mNBtn.click(function(){
 		$(this).removeClass('choose');
 		$mPBtn.addClass('choose');
-		$projects.animate({marginTop:-780});
+		$projects.animate({marginTop:-580});
 	});
 
 	$pBtn.click(function(){	
