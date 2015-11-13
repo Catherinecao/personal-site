@@ -2,6 +2,7 @@
 	background-color:$white;
 	top:0;
 	transform:translateX(-110%);
+	-webkit-transform:translateX(-110%);
 	position:absolute;
 	width:100%;
 	box-shadow:$dropshadow;
@@ -39,6 +40,7 @@
 	background-color:$white;
 	top:0;
 	transform:translateX(-110%);
+	-webkit-transform:translateX(-110%);
 	position:absolute;
 	width:100%;
 	box-shadow:$dropshadow;
@@ -120,9 +122,10 @@
 
 .paper-plane{
 	position:absolute;
-	right: -350px;
+	right: -400px;
 	top:100px;
 	transform:rotate(280deg);
+	-webkit-transform:rotate(280deg);
 	@media (min-width:$tablet-width){
 		bottom:200px;
 	}

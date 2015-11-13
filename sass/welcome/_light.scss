@@ -124,10 +124,12 @@
 .contact{
 	font-family: 'Architects Daughter', cursive;
 	transform:translateY(350px);
+	-webkit-transform:translateY(350px);
 	transition: all ease .5s;
-	position:absolute;
+	position:fixed;
 	bottom:0;
 	left:0;
+
 	display:inline-block;
 	width:100%;
 	background-color:$black;
@@ -171,6 +173,7 @@
 
 	&.open{
 		transform:translateY(0px);
+		-webkit-transform:translateY(0px);
 		//bottom: 0;
 		transition: all ease .5s;
 		form{
@@ -208,6 +211,7 @@
 	border-bottom: 350px solid transparent; 	
 	border-right:370px solid $black;
 	transform:rotateZ(150deg);
+	-webkit-transform:rotateZ(150deg);
 }
 .triangle-right{
 	display:none;
@@ -220,6 +224,7 @@
 		border-bottom: 350px solid transparent; 	
 		border-right:390px solid $black;
 		transform:rotateZ(125deg);
+		-webkit-transform:rotateZ(125deg);
 	}
 }
 

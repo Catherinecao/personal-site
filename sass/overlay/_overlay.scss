@@ -3,60 +3,73 @@
 	position:fixed;
 	z-index:1000;
 	background-color:$black;
-	height:100vh;
 	width:100%;
+	@media (min-width:$tablet-width){
+		height:100vh;
+	}
 
 	.close{
-		color: $white;
+		color: $black;
 		position: absolute;
 		top:10px;
 		right: 10px;
 		margin-bottom: 20px;
 		cursor: pointer;
+		z-index: 500;
 		@media (min-width:$tablet-width){
 			right: 10px;
 		}
 		@media (min-width:$desk-width){
 			right: 10px;
 		}
-		@media (min-width:$large-width){
-			right: 10%;
-		}
+
 	}
 	.content{
 		// margin-left:auto;
 		// margin-right:auto;
-
 		overflow-y: auto;
-		margin-top:50px;
-		padding: 10px;
 		background-color:$white;
 		width: 100%;
-		.slider{
+		position:relative;
+		.gallary{
 			margin-left:auto;
 			margin-right:auto;
+			padding-left:percentage(10/360);
+			padding-right:percentage(10/360);
 			width: 100%;
-			overflow: hidden;
-			.gallary{
-				width: 100%;
-				display: inline-block;
-				height: 400px;
-				position: relative;
-				@media (min-width:$tablet-width){
-					height: 500px;				
-				}
-					
-				.img{
-					position: absolute;
-					@media (min-width:$tablet-width){
-						width: 930px;
-						height: 500px;
-					}
-					width: 330px;
-					height: 400px;
-					background-color:transparent;
-				}
+			display: inline-block;
+			height:100vh;
+			overflow-y:scroll;
+			@media (min-width:$tablet-width){
+				width: 70%;
+				height:100vh;
+				float: left;
+				margin-top: 50px;
 			}
+
+			.img{
+				display: inline-block;
+				background-color:transparent;
+				border:1px solid red;	
+
+				img{
+					width: 100%;
+				}				
+			}
+		}
+		.detail{
+			@media (min-width:$tablet-width){
+				padding: 50px 50px;
+				width: 30%;
+				float: right;
+				height: 100vh;
+				right:0;
+			}
+			padding: 10px 30px 10px;
+			width: 100%;
+			background-color:$theme-color;
+			position: absolute;
+			top:0;
 		}
 	}
 }

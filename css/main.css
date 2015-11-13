@@ -290,8 +290,9 @@ button {
 .contact {
   font-family: 'Architects Daughter', cursive;
   transform: translateY(350px);
+  -webkit-transform: translateY(350px);
   transition: all ease .5s;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   display: inline-block;
@@ -327,6 +328,7 @@ button {
       margin-top: 20px; }
   .contact.open {
     transform: translateY(0px);
+    -webkit-transform: translateY(0px);
     transition: all ease .5s; }
     .contact.open form {
       display: block; }
@@ -348,7 +350,8 @@ button {
   border-left: 350px solid transparent;
   border-bottom: 350px solid transparent;
   border-right: 370px solid #001011;
-  transform: rotateZ(150deg); }
+  transform: rotateZ(150deg);
+  -webkit-transform: rotateZ(150deg); }
 
 .triangle-right {
   display: none; }
@@ -361,7 +364,8 @@ button {
       border-left: 350px solid transparent;
       border-bottom: 350px solid transparent;
       border-right: 390px solid #001011;
-      transform: rotateZ(125deg); } }
+      transform: rotateZ(125deg);
+      -webkit-transform: rotateZ(125deg); } }
 
 .bg-lights {
   display: none; }
@@ -418,6 +422,7 @@ button {
   background-color: #FFFFFC;
   top: 0;
   transform: translateX(-110%);
+  -webkit-transform: translateX(-110%);
   position: absolute;
   width: 100%;
   box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.3);
@@ -447,6 +452,7 @@ button {
   background-color: #FFFFFC;
   top: 0;
   transform: translateX(-110%);
+  -webkit-transform: translateX(-110%);
   position: absolute;
   width: 100%;
   box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.3);
@@ -503,9 +509,10 @@ button {
 
 .paper-plane {
   position: absolute;
-  right: -350px;
+  right: -400px;
   top: 100px;
-  transform: rotate(280deg); }
+  transform: rotate(280deg);
+  -webkit-transform: rotate(280deg); }
   @media (min-width: 640px) {
     .paper-plane {
       bottom: 200px; } }
@@ -557,51 +564,62 @@ button {
   position: fixed;
   z-index: 1000;
   background-color: #001011;
-  height: 100vh;
   width: 100%; }
+  @media (min-width: 640px) {
+    .overlay {
+      height: 100vh; } }
   .overlay .close {
-    color: #FFFFFC;
+    color: #001011;
     position: absolute;
     top: 10px;
     right: 10px;
     margin-bottom: 20px;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 500; }
     @media (min-width: 640px) {
       .overlay .close {
         right: 10px; } }
     @media (min-width: 960px) {
       .overlay .close {
         right: 10px; } }
-    @media (min-width: 1200px) {
-      .overlay .close {
-        right: 10%; } }
   .overlay .content {
     overflow-y: auto;
-    margin-top: 50px;
-    padding: 10px;
     background-color: #FFFFFC;
-    width: 100%; }
-    .overlay .content .slider {
+    width: 100%;
+    position: relative; }
+    .overlay .content .gallary {
       margin-left: auto;
       margin-right: auto;
+      padding-left: 2.77778%;
+      padding-right: 2.77778%;
       width: 100%;
-      overflow: hidden; }
-      .overlay .content .slider .gallary {
-        width: 100%;
+      display: inline-block;
+      height: 100vh;
+      overflow-y: scroll; }
+      @media (min-width: 640px) {
+        .overlay .content .gallary {
+          width: 70%;
+          height: 100vh;
+          float: left;
+          margin-top: 50px; } }
+      .overlay .content .gallary .img {
         display: inline-block;
-        height: 400px;
-        position: relative; }
-        @media (min-width: 640px) {
-          .overlay .content .slider .gallary {
-            height: 500px; } }
-        .overlay .content .slider .gallary .img {
-          position: absolute;
-          width: 330px;
-          height: 400px;
-          background-color: transparent; }
-          @media (min-width: 640px) {
-            .overlay .content .slider .gallary .img {
-              width: 930px;
-              height: 500px; } }
+        background-color: transparent;
+        border: 1px solid red; }
+        .overlay .content .gallary .img img {
+          width: 100%; }
+    .overlay .content .detail {
+      padding: 10px 30px 10px;
+      width: 100%;
+      background-color: #F5BB00;
+      position: absolute;
+      top: 0; }
+      @media (min-width: 640px) {
+        .overlay .content .detail {
+          padding: 50px 50px;
+          width: 30%;
+          float: right;
+          height: 100vh;
+          right: 0; } }
 
 /*# sourceMappingURL=main.css.map */

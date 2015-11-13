@@ -25,6 +25,7 @@ $(document).ready(function(){
 		$overlay = $('.overlay'),
 		$overlayClose = $('.close'),
 		$imgContainer = $('.gallary'),
+		$contentHeight = $('.detail').height(),
 		$img = $('.img-show:gt(0)'),
 		$singleProject = $('.img-s'),
 		$screenHeight = window.innerHeight,
@@ -32,7 +33,9 @@ $(document).ready(function(){
 		$navBg = $('.m-nav-bg'),
 		movingTime = 400,
 		slideshowInterval,
-		paperFlyShow;
+		paperFlyShow,
+		dataURL ="data.js",
+		dataModel = {};
 
 
 	//initialize
@@ -42,8 +45,17 @@ $(document).ready(function(){
 	$bgImg.css({"margin-top":$screenHeight*0.3});
 
 	$('.contact-form').formValidation();
+	if($screenWidth < 768){
+		$imgContainer.css({"padding-top":$contentHeight+20});
+	}
 
+	//renderProject
 
+	function renderProject(){
+
+		$('.gallary').html(Templates.imgs(dataModel));
+		$('.content').html(Templates.detail(dataModel));
+	}
 
 	
 	//contact box
@@ -166,12 +178,12 @@ $(document).ready(function(){
 	$singleProject.click(function(){
 		$img.hide();
 		$overlay.fadeIn(function(){
-		autoSlideShow();	
+		//autoSlideShow();	
 		});
 	});
 	$overlayClose.click(function(){ 
 		$overlay.fadeOut(300);
-		clearInterval(slideshowInterval);
+		//clearInterval(slideshowInterval);
 	});
 
 	function autoSlideShow (){
@@ -182,7 +194,7 @@ $(document).ready(function(){
 
 	function aboutShow (){
 		if($screenWidth < 768){
-			$aboutPage.animate({left:$screenWidth+20},{duration:movingTime},"easeOutBounce");
+			$aboutPage.animate({left:$screenWidth+60},{duration:movingTime},"easeOutBounce");
 		}else if($screenWidth < 1200){
 			$aboutPage.animate({left:$screenWidth*0.7+100},{duration:movingTime},"easeOutBounce");
 		}else{
@@ -250,7 +262,7 @@ $(document).ready(function(){
 
 	function projectShow (){
 		if($screenWidth < 768){
-			$projectPage.animate({left:$screenWidth+20},{duration:movingTime},"easeOutBounce");
+			$projectPage.animate({left:$screenWidth+60},{duration:movingTime},"easeOutBounce");
 		}else{
 			$projectPage.animate({left:$screenWidth*0.7+100},{duration:movingTime},"easeOutBounce");
 		}
