@@ -1,18 +1,28 @@
 var Templates = {};
 
+Templates.thumbnail = [
+
+		'<div class="img-s">',
+			'<img class="s" src="img/DR-m.png" alt="">',
+			'<img class="m" src="img/DR.png" alt="">',
+			'<div class="info">{{caption1}}</div>',
+		'</div>'
+
+].join('\n');
+
 Templates.imgs = [
 	'<div class="img clearfix">',
-        '{{#each images}}',
+        
             '<img src="{{img-1}}" alt="{{caption}}">',
-        '{{/each}}',
+        
     '</div>'
 ].join('\n');
 
 Templates.detail = [
-	'<div class="detail">',
+	
 	    '<h3 class="title">{{title}}</h3>',
-	    '<p>{{blur}}</p>',
-	'</div>'
+	    '<p>{{blur}}</p>'
+	
 ].join('\n');
 
 Templates.image = [

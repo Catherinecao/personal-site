@@ -34,7 +34,7 @@ $(document).ready(function(){
 		movingTime = 400,
 		slideshowInterval,
 		paperFlyShow,
-		dataURL ="data.js",
+		dataURL ='data.js',
 		dataModel = {};
 
 
@@ -52,11 +52,12 @@ $(document).ready(function(){
 	//renderProject
 
 	function renderProject(){
-
-		$('.gallary').html(Templates.imgs(dataModel));
-		$('.content').html(Templates.detail(dataModel));
+		console.log(dataModel);
+		$imgContainer.html(Templates.imgs(dataModel));
+		$('.detail').html(Templates.detail(dataModel));
+		$('#p').html(Templates.thumbnail(dataModel));
 	}
-
+	renderProject();
 	
 	//contact box
 	$contactTitle.click(function(e){
